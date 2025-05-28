@@ -1,0 +1,223 @@
+{% extends 'base.html' %}
+{% block title %}Admin : User Registrations{% endblock %}
+{% block content %}
+  {% load i18n %}
+  {% load custom_tags %}
+  <div class="page-header page-header-light">
+    <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+      <div class="breadcrumb">
+        <a href="{% url 'home' %}" class="breadcrumb-item">
+          <i class="icon-home2 mr-2"></i><font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">
+              {% translate 'Home' %}
+            </font>
+          </font>
+        </a>
+        <span class="breadcrumb-item">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">
+              {% translate 'Program' %}
+            </font>
+          </font>
+        </span>
+        <span class="breadcrumb-item">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">
+              {% translate 'User Management' %}
+            </font>
+          </font>
+        </span>
+        <span class="breadcrumb-item active">
+          <span class="font-weight-bold text-danger">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">
+                {% translate 'User Management' %}
+              </font>
+            </font>
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="content px-2 py-2 bg-white">
+    <div class="card border-grey-300 my-0 mb-1">
+      <div class="card-header bg-light header-elements-inline pl-2 py-2">
+        <h6 class="card-title font-weight-bold font-size-sm">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">
+              Edit User{% translate 'Edit User' %}
+            </font>
+          </font>
+        </h6>
+      </div>
+      <div class="card-body px-2 pt-2 pb-0">
+        <form id="frm1" name="frm1" method="post" class="update_user_form">
+          {% csrf_token %}
+          <div class="form-row">
+            <div class="form-group col-12 col-md-6 mb-2">
+              <label class="form-label-sm mb-0">
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">
+                    {% translate 'ID' %}
+                  </font>
+                </font>
+              </label><strong class="text-danger pl-1">
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">*</font>
+                </font>
+              </strong>
+              <div class="input-group input-group-sm">
+                <input type="hidden" name="idCheck" value="false" />
+                <input type="text" id="userid" name="userid" maxlength="20" class="form-control maxlength-badge-position" autocomplete="off" />
+                <span class="input-group-append">
+                  <button type="button" name="idCheck" onclick="check_id()" class="btn btn-slate bg-slate-600 border-slate-600 text-white">
+                    <font style="vertical-align: inherit;">
+                      <font style="vertical-align: inherit;">
+                        {% translate 'double check' %}
+                      </font>
+                    </font>
+                  </button>
+                </span>
+              </div>
+            </div>
+
+            <div class="form-group col-6 col-md-6 mb-2">
+              <label class="form-label-sm mb-0">
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">
+                    {% translate 'name' %}
+                  </font>
+                </font>
+              </label><strong class="text-danger pl-1">
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">*</font>
+                </font>
+              </strong>
+              <input type="text" name="userName" id="first_name" maxlength="10" class="form-control form-control-sm maxlength-badge-position" autocomplete="off" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-6 col-md-6 mb-2">
+              <label class="form-label-sm mb-0">
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">
+                    {% translate 'e-mail' %}
+                  </font>
+                </font>
+              </label><strong class="text-danger pl-1">
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">*</font>
+                </font>
+              </strong>
+              <input type="text" name="email" id="email" maxlength="70" class="form-control form-control-sm maxlength-badge-position" autocomplete="off" />
+            </div>
+          </div>
+          <div>
+            <label for="status" class="ml-2">{% translate 'Active' %}</label>
+            {% if user_data.is_active %}
+              <input type="checkbox" class="ml-2" id="CheckActiveBox" name="status" checked />
+            {% else %}
+              <input type="checkbox" class="ml-2" id="CheckActiveBox" name="status" />
+            {% endif %}
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 d-flex justify-content-between align-items-center">
+        <a href="{% url 'user_management_register' %}" class="btn btn-outline bg-danger border-grey-800 text-dark">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">
+              {% translate 'Cancel' %}
+            </font>
+          </font>
+        </a>
+        <button type="button" name="upd" onclick="register_user()" class="btn btn-dark border-grey-800">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">
+              {% translate 'Save' %}
+            </font>
+          </font>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let check_id = () => {
+      let Id = ''
+
+      if (document.getElementById('userid')) {
+        Id = document.getElementById('userid').value
+      }
+
+      let formData = new FormData()
+      let csrf = document.getElementsByName('csrfmiddlewaretoken')[0].value
+      formData.append('csrfmiddlewaretoken', csrf)
+      formData.append('userid', Id)
+
+      let xhr = new XMLHttpRequest()
+      if (Id != '') {
+        xhr.open('POST', "{% url 'check_user_id'%}")
+        xhr.send(formData)
+      } else {
+        alert('Enter ID')
+      }
+
+      xhr.onload = () => {
+        let res = JSON.parse(xhr.response)
+        if (!res['user_exist']) {
+          alert("user Doesn't Exist")
+        } else {
+          alert('User Exists')
+        }
+      }
+    }
+
+    let register_user = () => {
+      let Id = ''
+      let userName = ''
+      let first_name = ''
+      let email = ''
+      let status
+
+      if (document.getElementById('userid')) {
+        Id = document.getElementById('userid').value
+      }
+      if (document.getElementById('first_name')) {
+        first_name = document.getElementById('first_name').value
+      }
+
+      if (document.getElementById('email')) {
+        email = document.getElementById('email').value
+      }
+
+      if (document.getElementById('CheckActiveBox')) {
+        status = document.getElementById('CheckActiveBox').value
+      }
+
+      let formData = new FormData()
+      let csrf = document.getElementsByName('csrfmiddlewaretoken')[0].value
+      formData.append('csrfmiddlewaretoken', csrf)
+      formData.append('userid', Id)
+      formData.append('firstname', first_name)
+      formData.append('email', email)
+      formData.append('status', status)
+      let xhr = new XMLHttpRequest()
+      xhr.open('POST', "{% url 'user_management_register'%}")
+      xhr.send(formData)
+
+      xhr.onload = () => {
+        let res = JSON.parse(xhr.response)
+        if (res['msg']) {
+          alert(res['msg'])
+        }
+        if (res['success']) {
+          window.location.href = '{%url "user_management_register"%}'
+        }
+      }
+    }
+  </script>
+{% endblock %}

@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+      <div class="page-header page-header-light">
+					<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+						<div class="breadcrumb">
+							<a href="/mngr/main/main.do" class="breadcrumb-item"><i class="icon-home2 mr-2"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Home</font></font></a>
+							<span class="breadcrumb-item"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">program</font></font></span>
+							<span class="breadcrumb-item"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">operation management</font></font></span>
+							<span class="breadcrumb-item active"><span class="font-weight-bold text-danger"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bulletin board management</font></font></span></span>
+						</div>
+					</div>
+				</div>
+
+
+        <div class="content px-2 py-2 bg-white">
+            <div class="card border-grey-300 my-0 mb-1">
+            	<div class="card-header bg-light header-elements-inline pl-2 py-2">
+            		<h6 class="card-title font-weight-bold font-size-sm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Create a bulletin board</font></font></h6>
+            	</div>
+            	<div class="card-body px-2 py-2">
+
+            		<form id="frm1" name="frm1">
+
+            			<div class="form-group mb-2">
+            				<label class="form-label-sm mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">bulletin board</font></font></label><strong class="text-danger pl-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*</font></font></strong>
+            				<input type="text" name="title" maxlength="100" class="form-control form-control-sm maxlength-badge-position" autocomplete="off" placeholder="bulletin board">
+            			</div>
+
+            			<div class="form-group mb-2">
+            				<label class="form-label-sm mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">memo</font></font></label>
+            				<textarea name="memo" maxlength="450" class="form-control form-control-sm maxlength-badge-position" rows="3"></textarea>
+            			</div>
+
+            			<div class="form-row">
+                        	<div class="form-group col-6 col-md-3 mb-2">
+            					<label class="form-label-sm mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Notice</font></font></label><strong class="text-danger pl-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*</font></font></strong>
+            					<select name="noticeYn" class="form-control form-control-sm"><option value="Y"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">use</font></font></option><option value="N" selected=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">not used</font></font></option></select>
+
+            				</div>
+            				<div class="form-group col-6 col-md-3 mb-2">
+            					<label class="form-label-sm mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">category</font></font></label><strong class="text-danger pl-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*</font></font></strong>
+            					<select name="ctgrYn" class="form-control form-control-sm"><option value="Y"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">use</font></font></option><option value="N" selected=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">not used</font></font></option></select>
+
+            				</div>
+            				<div class="form-group col-6 col-md-3 mb-2">
+            					<label class="form-label-sm mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">tag</font></font></label><strong class="text-danger pl-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*</font></font></strong>
+            					<select name="tagYn" class="form-control form-control-sm"><option value="Y"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">use</font></font></option><option value="N" selected=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">not used</font></font></option></select>
+
+            				</div>
+            				<div class="form-group col-6 col-md-3 mb-2">
+            					<label class="form-label-sm mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Inquiry only</font></font></label><strong class="text-danger pl-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*</font></font></strong>
+            					<select name="readYn" class="form-control form-control-sm"><option value="Y"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">use</font></font></option><option value="N" selected=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">not used</font></font></option></select>
+
+            				</div>
+            			</div>
+
+            			<div class="form-row">
+                        	<div class="form-group col-6 col-md-3 mb-2">
+            					<label class="form-label-sm mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">reply</font></font></label><strong class="text-danger pl-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*</font></font></strong>
+            					<select name="replyYn" class="form-control form-control-sm"><option value="Y"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">use</font></font></option><option value="N" selected=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">not used</font></font></option></select>
+
+            				</div>
+            				<div class="form-group col-6 col-md-3 mb-2">
+            					<label class="form-label-sm mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">footer</font></font></label><strong class="text-danger pl-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*</font></font></strong>
+            					<select name="commentYn" class="form-control form-control-sm"><option value="Y"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">use</font></font></option><option value="N" selected=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">not used</font></font></option></select>
+
+            				</div>
+                        	<div class="form-group col-6 col-md-3 mb-2">
+            					<label class="form-label-sm mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Secret</font></font></label><strong class="text-danger pl-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*</font></font></strong>
+            					<select name="secretYn" class="form-control form-control-sm"><option value="Y"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">use</font></font></option><option value="N" selected=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">not used</font></font></option></select>
+
+            				</div>
+                        	<div class="form-group col-6 col-md-3 mb-2">
+            					<label class="form-label-sm mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">number of list outputs</font></font></label><strong class="text-danger pl-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*</font></font></strong>
+            					<div class="input-group input-group-sm">
+            						<input type="text" name="scale" value="20" maxlength="6" class="form-control maxlength-badge-position" autocomplete="off">
+            						<div class="input-group-append">
+            							<span class="input-group-text bg-slate-600 border-slate-600 text-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">case</font></font></span>
+            						</div>
+            					</div>
+            				</div>
+            			</div>
+
+            			<div class="form-row">
+                        	<div class="form-group col-6 col-md-3 mb-0">
+            					<label class="form-label-sm mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Attachments</font></font></label><strong class="text-danger pl-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*</font></font></strong>
+            					<select name="pdsYn" class="form-control form-control-sm"><option value="Y"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">use</font></font></option><option value="N" selected=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">not used</font></font></option></select>
+
+            				</div>
+                        	<div class="form-group col-6 col-md-3 mb-0">
+            					<label class="form-label-sm mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">upload file extension</font></font></label>
+            					<input type="text" name="pdsFileType" maxlength="50" class="form-control form-control-sm maxlength-badge-position border-slate-300 text-dark" autocomplete="off" disabled="disabled">
+            				</div>
+                        	<div class="form-group col-6 col-md-3 mb-0">
+            					<label class="form-label-sm mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Upload file size</font></font></label>
+            					<div class="input-group input-group-sm">
+            						<input type="text" name="pdsFileSize" maxlength="12" class="form-control form-control-sm maxlength-badge-position border-slate-300 text-dark" autocomplete="off" disabled="disabled">
+            		                <span class="input-group-append">
+            		                	<span class="input-group-text bg-slate-600 border-slate-600 text-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Byte</font></font></span>
+            						</span>
+            					</div>
+            				</div>
+                        	<div class="form-group col-6 col-md-3 mb-0">
+            					<label class="form-label-sm mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">use or not</font></font></label><strong class="text-danger pl-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*</font></font></strong>
+            					<select name="useYn" class="form-control form-control-sm"><option value="Y"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">use</font></font></option><option value="N" selected=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">not used</font></font></option></select>
+
+            				</div>
+            			</div>
+
+            			<div class="form-group tagGroups my-2 none">
+            				<label class="form-label-sm mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Head tag</font></font></label>
+            				<textarea name="tagHead" class="form-control form-control-sm" rows="3"></textarea>
+            			</div>
+
+            			<div class="form-group tagGroups mb-2 none">
+            				<label class="form-label-sm mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Body tag</font></font></label>
+            				<textarea name="tagBody" class="form-control form-control-sm" rows="3"></textarea>
+            			</div>
+
+            			<div class="form-group tagGroups mb-0 none">
+            				<label class="form-label-sm mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Foot tag</font></font></label>
+            				<textarea name="tagFoot" class="form-control form-control-sm" rows="3"></textarea>
+            			</div>
+
+            		</form>
+
+            	</div>
+            </div>
+
+            <div class="row">
+            	<div class="col-12 d-flex justify-content-between align-items-center">
+            		<a href="/bbs/tbl/lst.do?mnId=4de15ea5-bd59-4aca-a2eb-778bb0b9e38d" class="btn btn-outline bg-danger border-grey-800 text-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">cancel</font></font></a>
+            		<button type="button" name="ins" class="btn btn-dark border-grey-800"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Save</font></font></button>
+            	</div>
+            </div>
+				</div>
+{% endblock content %}

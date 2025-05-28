@@ -1,0 +1,192 @@
+{% extends "base.html" %}
+{% block content %}
+{% load i18n %}
+<!-- Page header -->
+<div class="page-header page-header-light">
+	<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+		<div class="breadcrumb">
+			<a href="{% url 'home' %}"  class="breadcrumb-item"><i class="icon-home2 mr-2"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Home"%}</font></font></a>
+			<!-- <span class="breadcrumb-item"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Program"%}</font></font></span> -->
+			<span class="breadcrumb-item"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Operation Management"%}</font></font></span>
+      <span class="breadcrumb-item active"><span class="font-weight-bold text-danger"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Bulletin board management"%}</font></font></span></span>
+		</div>
+	</div>
+</div>
+<!-- /page header -->
+<!-- Content area -->
+<div class="content px-2 py-2 bg-white">
+    <div class="card border-grey-300 my-0 mb-1">
+    	<div class="card-header bg-light header-elements-inline pl-2 py-2">
+    		<h6 class="card-title font-weight-bold font-size-sm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">bulletin board list</font></font></h6>
+    	</div>
+    	<div class="card-body px-2 py-2">
+
+    		<div class="table-responsive">
+    			<table class="table table-bordered table-hover table-xs">
+					<caption></caption>
+    				<colgroup>
+    					<col width="5%">
+    					<col width="*">
+    					<col width="10%">
+    					<col width="10%">
+    					<col width="10%">
+    					<col width="10%">
+    					<col width="10%">
+    					<col width="15%">
+    				</colgroup>
+    				<thead class="thead-light text-center">
+    					<tr>
+    						<th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "turn"%}</font></font></th>
+    						<th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "notice board"%} </font></font></th>
+    						<th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "number of posts"%} </font></font></th>
+    						<th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "category"%}</font></font></th>
+    						<th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Attachments"%}</font></font></th>
+    						<th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Whether or not to use"%} </font></font></th>
+    						<th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Creation date"%}</font></font></th>
+    						<th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "note"%}</font></font></th>
+    					</tr>
+    				</thead>
+    				<tbody>
+    								<tr class="text-center">
+    									<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">4</font></font></td>
+    									<td class="text-left"><a href="/mngr/bbs/tbl/sel.do?tbl=f8927e86-6d5b-4fa5-ab7f-e97ae16ebc97&amp;mnId=4de15ea5-bd59-4aca-a2eb-778bb0b9e38d" class="text-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">FAQ</font></font></a></td>
+    									<td class="text-right"><strong class="text-danger"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> cases</font></font></td>
+    									<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+
+
+    											not used
+
+    									</font></font></td>
+    									<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+
+
+    											not used
+
+    									</font></font></td>
+    									<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+
+
+    											not used
+
+    									</font></font></td>
+    									<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2021-03-24 18:05:15</font></font></td>
+    									<td>
+    										<a href="/mngr/bbs/tbl/upd.do?tbl=f8927e86-6d5b-4fa5-ab7f-e97ae16ebc97&amp;mnId=4de15ea5-bd59-4aca-a2eb-778bb0b9e38d" class="btn btn-sm btn-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Edit"%}</font></font></a>
+    										<a href="/mngr/bbs/ctgr/lst.do?tbl=f8927e86-6d5b-4fa5-ab7f-e97ae16ebc97&amp;mnId=4de15ea5-bd59-4aca-a2eb-778bb0b9e38d" class="btn btn-sm btn-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Category"%}</font></font></a>
+    										<a href="/mngr/bbs/lst.do?tbl=f8927e86-6d5b-4fa5-ab7f-e97ae16ebc97&amp;mnId=4de15ea5-bd59-4aca-a2eb-778bb0b9e38d" class="btn btn-sm btn-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Notice board"%}</font></font></a>
+    									</td>
+    								</tr>
+
+    								<tr class="text-center">
+    									<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3</font></font></td>
+    									<td class="text-left"><a href="/mngr/bbs/tbl/sel.do?tbl=f3ff86ff-5caa-4849-a1dd-c976b1f379f8&amp;mnId=4de15ea5-bd59-4aca-a2eb-778bb0b9e38d" class="text-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Reference Room</font></font></a></td>
+    									<td class="text-right"><strong class="text-danger"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> cases</font></font></td>
+    									<td>
+
+    											<strong class="text-danger"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">use</font></font></strong>
+
+
+    									</td>
+    									<td>
+
+    											<strong class="text-danger"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">use</font></font></strong>
+
+
+    									</td>
+    									<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+
+
+    											not used
+
+    									</font></font></td>
+    									<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2021-03-24 18:05:08</font></font></td>
+    									<td>
+    										<a href="/mngr/bbs/tbl/upd.do?tbl=f3ff86ff-5caa-4849-a1dd-c976b1f379f8&amp;mnId=4de15ea5-bd59-4aca-a2eb-778bb0b9e38d" class="btn btn-sm btn-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Edit"%}</font></font></a>
+    										<a href="/mngr/bbs/ctgr/lst.do?tbl=f3ff86ff-5caa-4849-a1dd-c976b1f379f8&amp;mnId=4de15ea5-bd59-4aca-a2eb-778bb0b9e38d" class="btn btn-sm btn-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Category"%}</font></font></a>
+    										<a href="/mngr/bbs/lst.do?tbl=f3ff86ff-5caa-4849-a1dd-c976b1f379f8&amp;mnId=4de15ea5-bd59-4aca-a2eb-778bb0b9e38d" class="btn btn-sm btn-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Notice board"%}</font></font></a>
+    									</td>
+    								</tr>
+
+    								<tr class="text-center">
+    									<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></td>
+    									<td class="text-left"><a href="/mngr/bbs/tbl/sel.do?tbl=ca8e9814-6ff2-4078-b072-d9ddf0cd99d2&amp;mnId=4de15ea5-bd59-4aca-a2eb-778bb0b9e38d" class="text-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Archive</font></font></a></td>
+    									<td class="text-right"><strong class="text-danger"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> cases</font></font></td>
+    									<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+
+
+    											not used
+
+    									</font></font></td>
+    									<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+
+
+    											not used
+
+    									</font></font></td>
+    									<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+
+
+    											not used
+
+    									</font></font></td>
+    									<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2021-03-24 18:03:49</font></font></td>
+    									<td>
+    										<a href="/mngr/bbs/tbl/upd.do?tbl=ca8e9814-6ff2-4078-b072-d9ddf0cd99d2&amp;mnId=4de15ea5-bd59-4aca-a2eb-778bb0b9e38d" class="btn btn-sm btn-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Edit"%}</font></font></a>
+    										<a href="/mngr/bbs/ctgr/lst.do?tbl=ca8e9814-6ff2-4078-b072-d9ddf0cd99d2&amp;mnId=4de15ea5-bd59-4aca-a2eb-778bb0b9e38d" class="btn btn-sm btn-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Category"%}</font></font></a>
+    										<a href="/mngr/bbs/lst.do?tbl=ca8e9814-6ff2-4078-b072-d9ddf0cd99d2&amp;mnId=4de15ea5-bd59-4aca-a2eb-778bb0b9e38d" class="btn btn-sm btn-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Notice board"%}</font></font></a>
+    									</td>
+    								</tr>
+
+    								<tr class="text-center">
+    									<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></td>
+    									<td class="text-left"><a href="/mngr/bbs/tbl/sel.do?tbl=4619a1ee-e1a1-4c5a-85e2-15da5315959f&amp;mnId=4de15ea5-bd59-4aca-a2eb-778bb0b9e38d" class="text-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Notice</font></font></a></td>
+    									<td class="text-right"><strong class="text-danger"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> cases</font></font></td>
+    									<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+
+
+    											not used
+
+    									</font></font></td>
+    									<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+
+
+    											not used
+
+    									</font></font></td>
+    									<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+
+
+    											not used
+
+    									</font></font></td>
+    									<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2021-03-24 18:03:14</font></font></td>
+    									<td>
+    										<a href="/mngr/bbs/tbl/upd.do?tbl=4619a1ee-e1a1-4c5a-85e2-15da5315959f&amp;mnId=4de15ea5-bd59-4aca-a2eb-778bb0b9e38d" class="btn btn-sm btn-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Edit"%}</font></font></a>
+    										<a href="/mngr/bbs/ctgr/lst.do?tbl=4619a1ee-e1a1-4c5a-85e2-15da5315959f&amp;mnId=4de15ea5-bd59-4aca-a2eb-778bb0b9e38d" class="btn btn-sm btn-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Category"%}</font></font></a>
+    										<a href="/mngr/bbs/lst.do?tbl=4619a1ee-e1a1-4c5a-85e2-15da5315959f&amp;mnId=4de15ea5-bd59-4aca-a2eb-778bb0b9e38d" class="btn btn-sm btn-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Notice board"%}</font></font></a>
+    									</td>
+    								</tr>
+
+
+
+
+    				</tbody>
+					<tfoot></tfoot>
+    			</table>
+    		</div>
+
+    	</div>
+    </div>
+
+    <div class="row">
+    	<div class="col-12 col-md-8">
+    		<ul class="pagination align-self-center"><li class="page-item disabled">	<a href="#" class="page-link white-space-nowrap"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Previous"%}</font></font></a></li><li class="page-item active">	<a href="#" class="page-link"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></a></li><li class="page-item disabled">	<a href="#" class="page-link white-space-nowrap"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Next"%}</font></font></a></li>	</ul>
+    	</div>
+    	<div class="col-12 col-md-4 mt-md-0 mt-1 text-right">
+    		<a href="/mngr/bbs/tbl/ins.do?mnId=4de15ea5-bd59-4aca-a2eb-778bb0b9e38d" class="btn btn-outline bg-dark border-grey-800 text-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Create a bulletin board"%}</font></font></a>
+    	</div>
+    </div>
+</div>
+<!-- content area //-->
+
+{% endblock content %}

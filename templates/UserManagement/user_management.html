@@ -1,0 +1,211 @@
+{% extends 'base.html' %}
+<!-- Admin : User Management -->
+{% block title %}Admin : User Management{% endblock %}
+{% load static %}
+{% block content %}
+  {% load i18n %}
+  {% load custom_tags %}
+  <div class="page-header page-header-light">
+    <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+      <div class="breadcrumb">
+        <a href="{% url 'home' %}" class="breadcrumb-item">
+          <i class="icon-home2 mr-2"></i><font style="vertical-align: inherit">
+            <font style="vertical-align: inherit">
+              {% translate 'Home' %}
+            </font>
+          </font>
+        </a>
+        <span class="breadcrumb-item">
+          <font style="vertical-align: inherit">
+            <font style="vertical-align: inherit">
+              {% translate 'Program' %}
+            </font>
+          </font>
+        </span>
+        <span class="breadcrumb-item">
+          <font style="vertical-align: inherit">
+            <font style="vertical-align: inherit">
+              {% translate 'User Management' %}
+            </font>
+          </font>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="content px-2 py-2 bg-white">
+    <div class="card border-grey-300 my-0 mb-1">
+      <div class="card-header bg-light header-elements-inline pl-2 py-2">
+        <h6 class="card-title font-weight-bold font-size-sm">
+          <font style="vertical-align: inherit">
+            <font style="vertical-align: inherit">
+              {% translate 'User Management' %}
+            </font>
+          </font>
+        </h6>
+      </div>
+      <div class="card-body px-2 py-2">
+        <table class="table table-bordered table-hover table-xs text-center" id="ourtable2">
+          <caption></caption>
+          <thead class="border">
+            <tr>
+              <th scope="col">
+                {% translate 'SNO' %}
+              </th>
+              <th scope="col">
+                {% translate 'Username' %}
+              </th>
+              <th scope="col">
+                {% translate 'Email' %}
+              </th>
+              <th scope="col">
+                {% translate 'Requested On' %}
+              </th>
+              <th scope="col">
+                {% translate 'Approved On' %}
+              </th>
+            </tr>
+          </thead>
+          <tfoot></tfoot>
+        </table>
+      </div>
+    </div>
+    <div class="mt-md-0 mt-1 text-right">
+      <a href="{% url 'user_management_register' %}" class="btn btn-outline bg-dark border-grey-800 text-dark">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">
+            {% translate 'User Registrations' %}
+          </font>
+        </font>
+      </a>
+    </div>
+  </div>
+
+  {% comment %} <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css" /> {% endcomment %}
+  <link href="{% static 'admin_dashboard/css/dataTables.css' %}" rel="stylesheet" />
+
+  {% comment %} <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.3.2/css/buttons.dataTables.min.css" /> {% endcomment %}
+  <link href="{% static 'admin_dashboard/css/dataTablesmin.css' %}" rel="stylesheet" />
+
+  {% comment %} <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script> {% endcomment %}
+  <script src="{% static 'admin_dashboard/js/jqueryDataTables.js' %}"></script>
+  {% comment %} <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/2.3.2/js/dataTables.buttons.min.js"></script> {% endcomment %}
+  <script src="{% static 'admin_dashboard/js/jquerybuttons.js' %}"></script>
+
+  {% comment %} <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script> {% endcomment %}
+  <script src="{% static 'admin_dashboard/js/jszip.js' %}"></script>
+
+  {% comment %} <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.html5.min.js"></script> {% endcomment %}
+  <script src="{% static 'admin_dashboard/js/html5js.js' %}"></script>
+
+  {% comment %} <script src="https://cdn.datatables.net/datetime/1.2.0/js/dataTables.dateTime.min.js"></script> {% endcomment %}
+  <script src="{% static 'admin_dashboard/js/dataTablesdateTime.js' %}"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.2/moment.min.js"></script>
+  <script src="{% static 'admin_dashboard/js/moment.js' %}"></script>
+
+
+  <script>
+    var fromDate, toDate
+    // Custom filtering function which will search data in column four between two values
+    $(document).ready(function () {
+      function newexportaction(e, dt, button, config) {
+        var self = this
+        var oldStart = dt.settings()[0]._iDisplayStart
+        dt.one('preXhr', function (e, s, data) {
+          // Just this once, load all data from the server...
+          data.start = 0
+          data.length = 2147483647
+          dt.one('preDraw', function (e, settings) {
+            // Call the original action function
+            if (button[0].className.indexOf('buttons-copy') >= 0) {
+              $.fn.dataTable.ext.buttons.copyHtml5.action.call(self, e, dt, button, config)
+            } else if (button[0].className.indexOf('buttons-excel') >= 0) {
+              $.fn.dataTable.ext.buttons.excelHtml5.available(dt, config) ? $.fn.dataTable.ext.buttons.excelHtml5.action.call(self, e, dt, button, config) : $.fn.dataTable.ext.buttons.excelFlash.action.call(self, e, dt, button, config)
+            } else if (button[0].className.indexOf('buttons-csv') >= 0) {
+              $.fn.dataTable.ext.buttons.csvHtml5.available(dt, config) ? $.fn.dataTable.ext.buttons.csvHtml5.action.call(self, e, dt, button, config) : $.fn.dataTable.ext.buttons.csvFlash.action.call(self, e, dt, button, config)
+            } else if (button[0].className.indexOf('buttons-pdf') >= 0) {
+              $.fn.dataTable.ext.buttons.pdfHtml5.available(dt, config) ? $.fn.dataTable.ext.buttons.pdfHtml5.action.call(self, e, dt, button, config) : $.fn.dataTable.ext.buttons.pdfFlash.action.call(self, e, dt, button, config)
+            } else if (button[0].className.indexOf('buttons-print') >= 0) {
+              $.fn.dataTable.ext.buttons.print.action(e, dt, button, config)
+            }
+            dt.one('preXhr', function (e, s, data) {
+              // DataTables thinks the first item displayed is index 0, but we're not drawing that.
+              // Set the property to what it was before exporting.
+              settings._iDisplayStart = oldStart
+              data.start = oldStart
+            })
+            // Reload the grid with the original page. Otherwise, API functions like table.cell(this) don't work properly.
+            setTimeout(dt.ajax.reload, 0)
+            // Prevent rendering of the full data to the DOM
+            return false
+          })
+        })
+        // Requery the server with the new one-time export settings
+        dt.ajax.reload()
+      }
+
+      var table = $('#ourtable2').DataTable({
+        processing: true,
+        serverSide: true,
+        pageLength: 10,
+
+        ajax: {
+          url: "{% url 'user_management_list' %}",
+          type: 'GET'
+        },
+        columns: [
+        { data: "", defaultContent: "<b></b>" },
+        { data: "username" , defaultContent: "<b></b>",
+          render: function ( data, type, row )
+          {
+            var url = "{% url 'user_management_update' 0 %}";
+            var id = row.id;
+            url = url.replace(0, id);
+            data = '<a href=' + url + ' class="text-secondary">'+row.username+'</a>';
+            return data
+          }
+        },
+        { data: "email", defaultContent: "<b></b>" },
+        { data: "requested_date", defaultContent: "<b></b>" , render: function ( data, type, row ) {
+          return row?.requested_date?.slice(0,10)
+        }},
+        { data: "approved_date", defaultContent: "<b></b>" , render: function ( data, type, row ) {
+          return row?.approved_date?.slice(0,10)
+        }}
+        ],
+        dom: 'Blfrtip',
+        columnDefs: [
+          {
+            visible: false,
+            searchable: false
+          }
+        ],
+        buttons: [
+          {
+            extend: 'excel',
+            text: 'Excel',
+            titleAttr: 'Excel',
+            action: newexportaction
+          },
+          {
+            extend: 'csv',
+            text: 'CSV',
+            titleAttr: 'CSV',
+            action: newexportaction
+          }
+        ]
+      })
+
+      table.on('draw.dt', function () {
+        var PageInfo = $('#ourtable2').DataTable().page.info()
+        table
+          .column(0, { page: 'current' })
+          .nodes()
+          .each(function (cell, i) {
+            cell.innerHTML = '<p  class = "mr-3">' + (i + 1 + PageInfo.start) + '</p>'
+          })
+      })
+    })
+  </script>
+{% endblock %}

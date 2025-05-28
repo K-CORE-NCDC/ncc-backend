@@ -1,0 +1,355 @@
+{% load static %}
+{% load i18n %}
+{% load custom_tags %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="{% static 'admin_dashboard/css/fonts/admin_font.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'admin_dashboard/css/icons/icomoon/styles.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'admin_dashboard/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'admin_dashboard/css/bootstrap_limitless.min.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'admin_dashboard/css/layout.min.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'admin_dashboard/css/components.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'admin_dashboard/css/colors.min.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'admin_dashboard/css/style.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'admin_dashboard/css/fonts/admin_font_awesome.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'admin_dashboard/css/fonts/admin_font_awesome_css.css' %}" rel="stylesheet" type="text/css" />
+    <!-- <title>Document</title> -->
+    <title>{% block title %}K-Core: Admin{% endblock %}</title>
+    <script src="{% static 'admin_dashboard/js/jquery-3.5.1.min.js' %}"></script>
+    <script src="{% static 'admin_dashboard/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'admin_dashboard/js/plugin/sweet_alert.min.js' %}"></script>
+    <script src="{% static 'admin_dashboard/js/plugin/forms/inputs/maxlength.min.js' %}"></script>
+    <script src="{% static 'admin_dashboard/js/app.js' %}"></script>
+
+    <!-- include libraries(jQuery, bootstrap) -->
+    <script src="{% static 'admin_dashboard/js/stackpath_bootstrap.js' %}"></script>
+    <!-- include summernote css/js -->
+    <link href="{% static 'admin_dashboard/css/summernote_css.css' %}" rel="stylesheet" type="text/css" />
+    <script src="{% static 'admin_dashboard/js/summernote.js' %}"></script>
+    <!-- include froala editor css/js -->
+    <script src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
+    <script src="{% static 'ckeditor/ckeditor-init.js' %}" data-ckeditor-basepath="{% static '/static/ckeditor/ckeditor/' %}" id="ckeditor-init-script"></script>
+    <script src="{% static 'ckeditor/ckeditor/plugins/html5video/plugin.js' %}"></script>
+    <script src="{% static 'admin_dashboard/js/bootstrapbundle.js' %}"></script>
+  </head>
+
+  <body>
+    {% block login %}
+
+    {% endblock %}
+    <div class="navbar navbar-expand-md navbar-light">
+      <!-- Header with logos -->
+      <div class="navbar-header navbar-dark d-none d-md-flex align-items-md-center">
+        <div class="navbar-brand navbar-brand-md">
+          <h1 class="mngrLogo left">
+
+            <p>
+              <b>K-CORE</b> Portal <b></b>
+            </p>
+          </h1>
+        </div>
+
+        <div class="navbar-brand navbar-brand-xs"></div>
+      </div>
+      <!-- /header with logos -->
+
+      <!-- Mobile controls -->
+      <div class="d-flex flex-1 d-md-none">
+        <div class="navbar-brand mr-auto"></div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile" aria-label="Toggle mobile menu">
+          <i class="icon-tree5"></i>
+        </button>
+        <button class="navbar-toggler sidebar-mobile-main-toggle" type="button" aria-label="Toggle mobile sidebar">
+          <i class="icon-paragraph-justify3"></i>
+        </button>
+      </div>
+      <!-- /mobile controls -->
+
+      <!-- Navbar content -->
+      <div class="collapse navbar-collapse" id="navbar-mobile">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <span class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block"><i class="fas fa-align-justify"></i></span>
+          </li>
+        </ul>
+
+        <span class="ml-md-3 mr-md-auto"></span>
+
+        <a href="http://3bigs.co.kr/k-core/" class="btn btn-outline bg-dark border-grey-800 text-dark" aria-label="admin" role="button" onclick="">사용자화면</a>
+
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown dropdown-user">
+            <a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown"><span>관리자</span></a>
+            <div class="dropdown-menu dropdown-menu-right my-2">
+              <a href="{% url 'logout' %}" class="dropdown-item logout"><i class="icon-switch2 mr-1"></i>로그아웃</a>
+            </div>
+          </li>
+          {% get_current_language as LANGUAGE_CODE %}
+          <div class="my-2">
+            <label for="select_languages">{% translate 'Select Language:' %}</label>
+            <select id="select_languages" name="languages_list" onchange="selectLanguage();">
+              {% get_current_language as LANGUAGE_CODE %}
+              {% get_available_languages as LANGUAGES %}
+              {% get_language_info_list for LANGUAGES as languages %}
+
+              {% for lang in languages %}
+                {% if lang.code == LANGUAGE_CODE %}
+                  <option value="{{ lang.code }}" selected>{{ lang.name_local }}</option>
+                {% else %}
+                  <option value="{{ lang.code }}">{{ lang.name_local }}</option>
+                {% endif %}
+              {% endfor %}
+            </select>
+          </div>
+        </ul>
+      </div>
+      <!-- /navbar content -->
+    </div>
+    <!-- /main navbar -->
+
+    <div class="page-content">
+      <!-- Main sidebar -->
+      <div class="sidebar sidebar-dark sidebar-main sidebar-expand-md">
+        <!-- Sidebar mobile toggler -->
+        <div class="sidebar-mobile-toggler text-center">
+          <span class="sidebar-mobile-main-toggle" aria-label="Toggle navigation">
+            <i class="icon-arrow-left8"></i>
+          </span>
+          <span class="align-middle">Navigation</span>
+          <a href="#" class="sidebar-mobile-expand" aria-label="Toggle sidebar size">
+            <i class="icon-screen-full"></i>
+            <i class="icon-screen-normal"></i>
+          </a>
+        </div>
+        <!-- /sidebar mobile toggler -->
+
+        <!-- Sidebar content -->
+        <div class="sidebar-content">
+          <!-- Main navigation -->
+          <div class="card card-sidebar-mobile">
+            <ul class="nav nav-sidebar" data-nav-type="accordion">
+              <li class="nav-item nav-item-submenu">
+                <a href="#" class="nav-link">
+                  <i class="fas fa-users"></i>
+                  <span class="align-middle">{% translate 'User Management' %}</span>
+                </a>
+                <ul class="nav nav-group-sub">
+                  <li class="nav-item">
+                    <a href="{% url 'user_management' %}" class="nav-link">
+                      <span class="align-middle">{% translate 'User Management' %}</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item nav-item-submenu">
+                <a href="#" class="nav-link">
+                  <i class="far fa-comment-alt"></i>
+                  <span class="align-middle">{% translate 'Community Management' %}</span>
+                </a>
+                <ul class="nav nav-group-sub">
+                  <li class="nav-item">
+                    <a href="{% url 'notice' %}" class="nav-link">
+                      <span class="align-middle">{% translate 'Notice' %}</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{% url 'q_and_a' %}" class="nav-link">
+                      <span class="align-middle">{% translate 'Archive' %}</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{% url 'faq' %}" class="nav-link">
+                      <span class="align-middle">{% translate 'FAQ' %}</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item nav-item-submenu">
+                <a href="#" class="nav-link">
+                  <i class="far fa-list-alt mr-2"></i>
+                  <span class="align-middle ml-2">{% translate 'Monitoring Dashboard' %}</span>
+                </a>
+                <ul class="nav nav-group-sub">
+                  <li class="nav-item">
+                    <a href="{% url 'session_mgmt' %}" class="nav-link">
+                      <span class="align-middle">{% translate 'Session Statistics' %}</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item nav-item-submenu">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-list-alt mr-2"></i>
+                    <span class="align-middle ml-2">{% translate 'Log list' %}</span>
+                  </a>
+                <ul class="nav nav-group-sub">
+                  <li class="nav-item">
+                    <a href="{% url 'log_list' %}" class="nav-link">
+                      <span class="align-middle">{% translate 'Log list' %}</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{% url 'capture_log_list' %}" class="nav-link">
+                      <span class="align-middle">{% translate 'Capture Log list' %}</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item nav-item-submenu">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-list-alt mr-2"></i>
+                    <span class="align-middle ml-2">{% translate 'Project Management' %}</span>
+                  </a>
+                <ul class="nav nav-group-sub">
+                  <li class="nav-item">
+                    <a href="{% url 'project_list' %}" class="nav-link">
+                      <span class="align-middle">{% translate 'Projects' %}</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <!-- /main navigation -->
+        </div>
+        <!-- /sidebar content -->
+      </div>
+      <!-- /main sidebar -->
+
+      <!-- Main content -->
+      <div class="content-wrapper">
+        <!-- Page header -->
+
+        <!-- /page header -->
+        <!-- Content area -->
+        {% block content %}
+
+        {% endblock %}
+        <!-- content area // -->
+
+        <!-- Footer -->
+        <div class="navbar navbar-expand-lg navbar-light">
+          <div class="text-center d-lg-none w-100">
+            <span class="navbar-text py-2">
+              <span>© 2024.</span>
+              <span class="text-slate-300">3BIGS</span>
+              <span>All Rights Reserved.</span>
+            </span>
+          </div>
+
+          <div class="navbar-collapse collapse" id="navbar-footer">
+            <span class="navbar-text py-2">
+              <span>© 2024.</span>
+              <span class="text-slate-300">3BIGS</span>
+              <span>All Rights Reserved.</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% block footer %}
+
+    {% endblock %}
+  </body>
+  <script type="text/javascript">
+    var content
+    function notice_form() {
+      let data = content.getData()
+      document.getElementById('ckeditor-init-script').value = data
+      let title = document.getElementById('title').value
+      let usernm = document.getElementById('usernm').value
+      console.log(title, usernm)
+      if (title === '' || usernm === '' || data === '') {
+        alert('enter mandatiry fields')
+      } else {
+        $('.notice_form1').submit()
+      }
+    }
+
+    function edit_community_form() {
+      let title = document.getElementById('title').value
+      let usernm = document.getElementById('usernm').value
+      let data = content.getData()
+      document.getElementById('ckeditor-init-script').value = data
+      if (title === '' || usernm === '' || data === '') {
+        alert('enter mandatiry fields')
+      } else {
+        $('.update_form').submit()
+      }
+    }
+
+    $(document).ready(function () {
+      $('.delete').on('click', function (e) {
+        if (!confirm('Are you sure you want to Delete ?')) {
+          e.preventDefault()
+        }
+      })
+    })
+
+    function search_form() {
+      $('.search_form').submit()
+    }
+
+    function update_register_form() {
+      $('.update_user_form').submit()
+    }
+
+    function user_register() {
+      $('.user_register').submit()
+    }
+
+    $('#CheckActiveBox').on('change', function () {
+      if ($(this).is(':checked')) {
+        $(this).val('True')
+      } else {
+        $(this).val('False')
+      }
+    })
+    $('#CheckActiveBoxNotice').on('change', function () {
+      if ($(this).is(':checked')) {
+        $(this).val('True')
+      } else {
+        $(this).val('False')
+      }
+    })
+
+    let selectLanguage = () => {
+      let domain = '{{request.build_absolute_uri}}'
+
+      let languageOption = document.querySelector('#select_languages').value
+      let before_url = ''
+      let after_url = ''
+      let final_url = ''
+      let currentUrl = domain
+
+
+      if(currentUrl.includes('/ko/')){
+        if(languageOption=='en'){
+          currentUrl = currentUrl.replace('/ko/','/en/')
+        }
+
+        window.location.href = currentUrl
+      }else if (currentUrl.includes('/en/')){
+        if(languageOption=='ko'){
+          currentUrl = currentUrl.replace('/en/','/ko/')
+        }
+
+        window.location.href = currentUrl
+      }else{
+        let url = currentUrl.split('/k-corev/')
+        console.log(url)
+        window.location.href = url[0]+'/k-corev/'+languageOption+'/'+url[1]
+      }
+    }
+
+
+  </script>
+  {% block script %}
+
+  {% endblock %}
+</html>

@@ -1,0 +1,178 @@
+{% extends 'base.html' %}
+{% block title %}Archive: Details{% endblock %}
+{% block content %}
+  {% load i18n %}
+  {% load custom_tags %}
+  <div class="page-header page-header-light">
+    <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+      <div class="breadcrumb">
+        <a href="{% url 'home' %}" class="breadcrumb-item">
+          <i class="icon-home2 mr-2"></i>
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">
+              {% translate 'Home' %}
+            </font>
+          </font>
+        </a>
+        <span class="breadcrumb-item">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">
+              {% translate 'Program' %}
+            </font>
+          </font>
+        </span>
+        <span class="breadcrumb-item">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">
+              {% translate 'Community Management' %}
+            </font>
+          </font>
+        </span>
+        <span class="breadcrumb-item active">
+          <span class="font-weight-bold text-danger">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">
+                {% translate 'Archive' %}
+              </font>
+            </font>
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+  {% if edit %}
+  <div class="content px-2 py-2 bg-white">
+    <div class="card border-grey-300 my-0 mb-1">
+      <div class="card-header bg-light header-elements-inline pl-2 py-2">
+        <h6 class="card-title font-weight-bold font-size-sm">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">
+              {% translate 'edit post' %}
+            </font>
+          </font>
+        </h6>
+      </div>
+      <div class="card-body px-2 py-0">
+        <form id="frm1" name="frm1" action="{% url 'q_and_a_update' pk=q_and_a_detail.id %}" method="post" class="update_form">
+          <input type="hidden" name="tbl" value="4619a1ee-e1a1-4c5a-85e2-15da5315959f" />
+          <input type="hidden" name="code" value="c5c07a25-353d-459e-82eb-318e8e793492" />
+          {% csrf_token %}
+          <div class="form-group my-2">
+            <label class="form-label-sm font-weight-bolder mb-0">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">
+                  {% translate 'Title' %}
+                </font>
+              </font><strong class="text-danger pl-1">
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">*</font>
+                </font>
+              </strong>
+            </label>
+            <input type="text" name="title" id="title" maxlength="120" value="{{ q_and_a_detail.title }}" class="form-control form-control-sm maxlength-badge-position" autocomplete="off" placeholder="title" />
+          </div>
+          <div class="form-row">
+            <div class="form-group col-12 col-md mb-2">
+              <label class="form-label-sm font-weight-bolder mb-0">
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">
+                    {% translate 'Author' %}
+                  </font>
+                </font><strong class="text-danger pl-1">
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">*</font>
+                  </font>
+                </strong>
+              </label>
+              <input type="text" name="usernm" id="usernm" maxlength="25" value="{{ q_and_a_detail.writer }}" class="form-control form-control-sm maxlength-badge-position" autocomplete="off" placeholder="Author name" />
+            </div>
+          </div>
+          <div class="form-group mb-2">
+            <label class="form-label-sm font-weight-bolder mb-0">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">
+                  {% translate 'Contents' %}
+                </font>
+              </font>
+            </label><strong class="text-danger pl-1">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">*</font>
+              </font>
+            </strong>
+            <textarea id="ckeditor-init-script" name="detail">{{ q_and_a_detail.content }}</textarea>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 d-flex justify-content-between align-items-center">
+        <a href="{% url 'q_and_a_update' pk=q_and_a_detail.id %}" class="btn btn-outline bg-danger border-grey-800 text-dark">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">
+              {% translate 'Cancel' %}
+            </font>
+          </font>
+        </a>
+        <button type="button" name="upd" onclick="edit_community_form()" class="btn btn-dark border-grey-800">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">
+              {% translate 'Save' %}
+            </font>
+          </font>
+        </button>
+      </div>
+    </div>
+  </div>
+  {% else %}
+  <div class="content px-2 py-2 bg-white">
+    <div class="card border-grey-300 my-0 mb-1">
+      <div class="card-header bg-light header-elements-inline pl-2 py-2">
+        <h6 class="card-title font-weight-bold font-size-sm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Post details"%}</font></font>
+        </h6>
+      </div>
+      <div class="card-body px-2 py-2">
+        <fieldset disabled="disabled">
+          <div class="form-group mb-2">
+            <label class="form-label-sm mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "title"%}</font></font></label>
+            <input type="text" value= "{{ q_and_a_detail.title }}"  class="form-control form-control-sm text-dark">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-12 col-md mb-2">
+              <label class="form-label-sm mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Writer"%}</font></font></label>
+              <input type="text" value="{{ q_and_a_detail.writer }}" class="form-control form-control-sm text-dark">
+            </div>
+          </div>
+          <div class="form-group mb-0">
+            <label class="form-label-sm mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Contents"%}</font></font></label>
+            <div class="card mb-0" style="min-height: 150px;">
+              <div class="card-body px-2 py-2">
+                <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{ q_and_a_detail.content|safe }}</font><font style="vertical-align: inherit;">{{ q_and_a_detail.created_on|date:"Y-m-d" }}</font></font><br></p>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 text-right">
+        <a href="{% url 'q_and_a' %}" class="btn btn-outline bg-dark border-grey-800 text-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">List</font></font></a>
+        <a href="{% url 'q_and_a_update' pk=q_and_a_detail.id %}?edit=True" class="btn btn-outline bg-dark border-grey-800 text-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Edit"%}</font></font></a>
+        <a href="{% url 'q_and_a_delete' pk=q_and_a_detail.id %}?edit=True" class="btn delete tn-outline  btn-danger border-danger-800 text-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Delete"%}</font></font></a>
+      </div>
+    </div>
+</div>
+  {% endif %}
+  <script>
+    content = CKEDITOR.replace('detail', {
+      extraPlugins: 'html5video',
+      filebrowserBrowseUrl: '/k-corev/ckeditor/browse/all',
+      filebrowserImageBrowseUrl: '/k-corev/ckeditor/browse/image',
+      filebrowserVideoBrowseUrl: '/k-corev/ckeditor/browse/video',
+      filebrowserUploadUrl: '/k-corev/ckeditor/upload/'
+    })
+    function selectFile(fileUrl) {
+      window.opener.CKEDITOR.tools.callFunction(1, fileUrl)
+    }
+  </script>
+{% endblock %}

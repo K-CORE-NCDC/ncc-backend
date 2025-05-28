@@ -1,0 +1,860 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-22 11:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: admin_app/views.py:59
+msgid "hello"
+msgstr "안녕하세요"
+
+#: ckeditor_uploader/forms.py:6
+msgid "Search files"
+msgstr ""
+
+#: ckeditor_uploader/templates/ckeditor/browse.html:6
+msgid "Select an image to embed"
+msgstr ""
+
+#: ckeditor_uploader/templates/ckeditor/browse.html:28
+msgid "Browse for the image you want, then click 'Embed Image' to continue..."
+msgstr ""
+
+#: ckeditor_uploader/templates/ckeditor/browse.html:30
+msgid ""
+"No images found. Upload images using the 'Image Button' dialog's 'Upload' "
+"tab."
+msgstr ""
+
+#: ckeditor_uploader/templates/ckeditor/browse.html:51
+msgid "Images in: "
+msgstr ""
+
+#: ckeditor_uploader/templates/ckeditor/browse.html:63
+msgid "Embed Images"
+msgstr ""
+
+#: ckeditor_uploader/templates/ckeditor/browse.html:81
+msgid "Embed Imager"
+msgstr ""
+
+#: ckeditor_uploader/templates/ckeditor/browse.html:147
+msgid "Play Slideshow"
+msgstr ""
+
+#: ckeditor_uploader/templates/ckeditor/browse.html:148
+msgid "Pause Slideshow"
+msgstr ""
+
+#: ckeditor_uploader/templates/ckeditor/browse.html:149
+msgid "&lsaquo; Previous Photo"
+msgstr ""
+
+#: ckeditor_uploader/templates/ckeditor/browse.html:150
+msgid "Next Photo &rsaquo;"
+msgstr ""
+
+#: ckeditor_uploader/templates/ckeditor/browse.html:151
+msgid "Next &rsaquo;"
+msgstr ""
+
+#: ckeditor_uploader/templates/ckeditor/browse.html:152
+msgid "&lsaquo; Prev"
+msgstr ""
+
+#: ncc/settings.py:174 ncc/settingscopy.py:500
+msgid "English"
+msgstr ""
+
+#: ncc/settings.py:175 ncc/settingscopy.py:501
+msgid "Korean"
+msgstr ""
+
+#: templates/CommunityManagement/FAQ/edit_form.html:11
+#: templates/CommunityManagement/FAQ/faq.html:9
+#: templates/CommunityManagement/FAQ/faq_form.html:11
+#: templates/CommunityManagement/Notice/edit_form.html:8
+#: templates/CommunityManagement/Notice/notice.html:9
+#: templates/CommunityManagement/Notice/notice_form.html:8
+#: templates/CommunityManagement/Q&A/edit_form.html:12
+#: templates/CommunityManagement/Q&A/q_and_a.html:9
+#: templates/CommunityManagement/Q&A/q_and_a_form.html:11
+#: templates/Log/download_report.html:12 templates/Log/log_list.html:8
+#: templates/ProjectManagement/project_list.html:8
+#: templates/SessionMgmt/session_mgmt.html:8
+#: templates/UserManagement/user_management.html:12
+#: templates/UserManagement/user_management_register.html:11
+#: templates/UserManagement/user_management_update.html:8
+#: templates/index.html:8
+msgid "Home"
+msgstr "집"
+
+#: templates/CommunityManagement/FAQ/edit_form.html:18
+#: templates/CommunityManagement/FAQ/faq.html:10
+#: templates/CommunityManagement/FAQ/faq_form.html:18
+#: templates/CommunityManagement/Notice/edit_form.html:9
+#: templates/CommunityManagement/Notice/notice.html:10
+#: templates/CommunityManagement/Notice/notice_form.html:9
+#: templates/CommunityManagement/Q&A/edit_form.html:19
+#: templates/CommunityManagement/Q&A/q_and_a.html:10
+#: templates/CommunityManagement/Q&A/q_and_a_form.html:18
+#: templates/Log/download_report.html:19 templates/Log/log_list.html:9
+#: templates/ProjectManagement/project_list.html:9
+#: templates/SessionMgmt/session_mgmt.html:9
+#: templates/UserManagement/user_management.html:19
+#: templates/UserManagement/user_management_register.html:18
+#: templates/UserManagement/user_management_update.html:9
+#: templates/index.html:9
+msgid "Program"
+msgstr "프로그램"
+
+#: templates/CommunityManagement/FAQ/edit_form.html:25
+#: templates/CommunityManagement/FAQ/faq.html:11
+#: templates/CommunityManagement/FAQ/faq_form.html:25
+#: templates/CommunityManagement/Notice/edit_form.html:10
+#: templates/CommunityManagement/Notice/notice.html:11
+#: templates/CommunityManagement/Notice/notice_form.html:10
+#: templates/CommunityManagement/Q&A/edit_form.html:26
+#: templates/CommunityManagement/Q&A/q_and_a.html:11
+#: templates/CommunityManagement/Q&A/q_and_a_form.html:25
+#: templates/base.html:202
+msgid "Community Management"
+msgstr "커뮤니티 관리"
+
+#: templates/CommunityManagement/FAQ/edit_form.html:33
+#: templates/CommunityManagement/FAQ/faq.html:12
+#: templates/CommunityManagement/FAQ/faq.html:48
+#: templates/CommunityManagement/FAQ/faq_form.html:33 templates/base.html:230
+msgid "FAQ"
+msgstr "FAQ"
+
+#: templates/CommunityManagement/FAQ/edit_form.html:48
+#: templates/CommunityManagement/Notice/edit_form.html:19
+#: templates/CommunityManagement/Q&A/edit_form.html:49
+msgid "edit post"
+msgstr "게시물 편집"
+
+#: templates/CommunityManagement/FAQ/edit_form.html:65
+#: templates/CommunityManagement/FAQ/faq.html:57
+#: templates/CommunityManagement/Notice/edit_form.html:27
+#: templates/CommunityManagement/Notice/notice.html:28
+#: templates/CommunityManagement/Notice/notice.html:58
+#: templates/CommunityManagement/Q&A/edit_form.html:63
+#: templates/CommunityManagement/Q&A/q_and_a.html:27
+#: templates/CommunityManagement/Q&A/q_and_a.html:57
+msgid "Title"
+msgstr "제목"
+
+#: templates/CommunityManagement/FAQ/edit_form.html:80
+#: templates/CommunityManagement/Notice/edit_form.html:32
+#: templates/CommunityManagement/Q&A/edit_form.html:78
+msgid "Author"
+msgstr "작가"
+
+#: templates/CommunityManagement/FAQ/edit_form.html:95
+#: templates/CommunityManagement/FAQ/edit_form.html:168
+#: templates/CommunityManagement/FAQ/faq.html:28
+#: templates/CommunityManagement/FAQ/faq_form.html:93
+#: templates/CommunityManagement/Notice/edit_form.html:37
+#: templates/CommunityManagement/Notice/edit_form.html:76
+#: templates/CommunityManagement/Notice/notice.html:29
+#: templates/CommunityManagement/Notice/notice_form.html:37
+#: templates/CommunityManagement/Q&A/edit_form.html:93
+#: templates/CommunityManagement/Q&A/edit_form.html:146
+#: templates/CommunityManagement/Q&A/q_and_a.html:28
+#: templates/CommunityManagement/Q&A/q_and_a_form.html:106
+msgid "Contents"
+msgstr "내용"
+
+#: templates/CommunityManagement/FAQ/edit_form.html:113
+#: templates/CommunityManagement/FAQ/faq_form.html:112
+#: templates/CommunityManagement/Notice/edit_form.html:50
+#: templates/CommunityManagement/Notice/notice_form.html:45
+#: templates/CommunityManagement/Q&A/edit_form.html:111
+#: templates/CommunityManagement/Q&A/q_and_a_form.html:118
+#: templates/UserManagement/user_management_register.html:132
+#: templates/UserManagement/user_management_update.html:93
+msgid "Cancel"
+msgstr "취소"
+
+#: templates/CommunityManagement/FAQ/edit_form.html:120
+#: templates/CommunityManagement/FAQ/faq_form.html:119
+#: templates/CommunityManagement/Notice/edit_form.html:51
+#: templates/CommunityManagement/Notice/notice_form.html:46
+#: templates/CommunityManagement/Q&A/edit_form.html:118
+#: templates/CommunityManagement/Q&A/q_and_a_form.html:125
+#: templates/UserManagement/user_management_register.html:139
+#: templates/UserManagement/user_management_update.html:98
+msgid "Save"
+msgstr "저장"
+
+#: templates/CommunityManagement/FAQ/edit_form.html:134
+#: templates/CommunityManagement/Notice/edit_form.html:59
+#: templates/CommunityManagement/Q&A/edit_form.html:129
+msgid "Post details"
+msgstr "게시물 상세"
+
+#: templates/CommunityManagement/FAQ/edit_form.html:145
+#: templates/CommunityManagement/FAQ/faq.html:27
+#: templates/CommunityManagement/FAQ/faq_form.html:61
+#: templates/CommunityManagement/Notice/edit_form.html:65
+#: templates/CommunityManagement/Notice/notice_form.html:26
+#: templates/CommunityManagement/Q&A/edit_form.html:135
+#: templates/CommunityManagement/Q&A/q_and_a_form.html:61
+msgid "title"
+msgstr "제목"
+
+#: templates/CommunityManagement/FAQ/edit_form.html:157
+#: templates/CommunityManagement/FAQ/faq.html:29
+#: templates/CommunityManagement/FAQ/faq.html:58
+#: templates/CommunityManagement/Notice/edit_form.html:71
+#: templates/CommunityManagement/Notice/notice.html:30
+#: templates/CommunityManagement/Notice/notice.html:59
+#: templates/CommunityManagement/Q&A/edit_form.html:141
+#: templates/CommunityManagement/Q&A/q_and_a.html:29
+#: templates/CommunityManagement/Q&A/q_and_a.html:58
+msgid "Writer"
+msgstr "저자"
+
+#: templates/CommunityManagement/FAQ/edit_form.html:196
+#: templates/CommunityManagement/Notice/edit_form.html:102
+#: templates/CommunityManagement/Q&A/edit_form.html:159
+#: templates/OperationManagement/bulletin_board_management.html:77
+#: templates/OperationManagement/bulletin_board_management.html:107
+#: templates/OperationManagement/bulletin_board_management.html:137
+#: templates/OperationManagement/bulletin_board_management.html:167
+#: templates/UserManagement/user_management_update.html:183
+#: templates/index.html:73 templates/index.html:103 templates/index.html:133
+#: templates/index.html:163
+#, fuzzy
+#| msgid "Edit User"
+msgid "Edit"
+msgstr "사용자 수정"
+
+#: templates/CommunityManagement/FAQ/edit_form.html:203
+#: templates/CommunityManagement/Notice/edit_form.html:103
+#: templates/CommunityManagement/Q&A/edit_form.html:160
+#: templates/UserManagement/user_management_update.html:191
+msgid "Delete"
+msgstr "삭제"
+
+#: templates/CommunityManagement/FAQ/faq.html:25
+#: templates/CommunityManagement/Notice/notice.html:26
+#: templates/CommunityManagement/Q&A/q_and_a.html:25
+msgid "Search Type"
+msgstr "검색 조건"
+
+#: templates/CommunityManagement/FAQ/faq.html:33
+#: templates/CommunityManagement/Notice/notice.html:34
+#: templates/CommunityManagement/Q&A/q_and_a.html:33
+msgid "Search Content"
+msgstr "검색 내용"
+
+#: templates/CommunityManagement/FAQ/faq.html:38
+#: templates/CommunityManagement/Notice/notice.html:39
+#: templates/CommunityManagement/Q&A/q_and_a.html:38
+msgid "Search"
+msgstr "검색"
+
+#: templates/CommunityManagement/FAQ/faq.html:56
+#: templates/CommunityManagement/Notice/notice.html:57
+#: templates/CommunityManagement/Q&A/q_and_a.html:56
+#: templates/Log/download_report.html:93
+#: templates/UserManagement/user_management.html:50
+msgid "SNO"
+msgstr "NO"
+
+#: templates/CommunityManagement/FAQ/faq.html:59
+#: templates/CommunityManagement/Notice/notice.html:60
+#: templates/CommunityManagement/Q&A/q_and_a.html:59
+msgid "Date of Issue"
+msgstr "작성일"
+
+#: templates/CommunityManagement/FAQ/faq.html:66
+#: templates/CommunityManagement/Notice/notice.html:67
+#: templates/CommunityManagement/Q&A/q_and_a.html:66
+#: templates/OperationManagement/bulletin_board_management.html:21
+msgid "bulletin board list"
+msgstr "게시판 목록"
+
+#: templates/CommunityManagement/FAQ/faq.html:67
+#: templates/CommunityManagement/FAQ/faq_form.html:48
+#: templates/CommunityManagement/Notice/notice.html:68
+#: templates/CommunityManagement/Notice/notice_form.html:19
+#: templates/CommunityManagement/Q&A/q_and_a.html:67
+#: templates/CommunityManagement/Q&A/q_and_a_form.html:48
+msgid "Write a post"
+msgstr "게시물 작성"
+
+#: templates/CommunityManagement/FAQ/faq_form.html:77
+#: templates/CommunityManagement/Notice/notice_form.html:32
+#: templates/CommunityManagement/Q&A/q_and_a_form.html:77
+msgid "writer"
+msgstr "저자"
+
+#: templates/CommunityManagement/Notice/edit_form.html:11
+#: templates/CommunityManagement/Notice/notice.html:12
+#: templates/CommunityManagement/Notice/notice.html:49
+#: templates/CommunityManagement/Notice/notice_form.html:11
+#: templates/base.html:212
+msgid "Notice"
+msgstr "공지사항"
+
+#: templates/CommunityManagement/Notice/edit_form.html:86
+#: templates/CommunityManagement/Notice/edit_form.html:91
+#: templates/UserManagement/user_management_register.html:117
+#: templates/UserManagement/user_management_update.html:76
+#: templates/UserManagement/user_management_update.html:154
+#: templates/UserManagement/user_management_update.html:159
+msgid "Active"
+msgstr "활성화"
+
+#: templates/CommunityManagement/Q&A/edit_form.html:34
+#: templates/CommunityManagement/Q&A/q_and_a.html:12
+#: templates/CommunityManagement/Q&A/q_and_a_form.html:33
+#: templates/base.html:221
+msgid "Archive"
+msgstr "보관됨"
+
+#: templates/Log/download_report.html:26 templates/Log/log_list.html:10
+msgid "Log"
+msgstr "로그"
+
+#: templates/Log/download_report.html:34
+#, fuzzy
+#| msgid "Capture Log list"
+msgid "Capture Log"
+msgstr "시각화 결과 로그 목록"
+
+#: templates/Log/download_report.html:48 templates/base.html:272
+msgid "Capture Log list"
+msgstr "시각화 결과 로그 목록"
+
+#: templates/Log/download_report.html:55 templates/Log/log_list.html:43
+msgid "Date Range"
+msgstr "날짜 기간"
+
+#: templates/Log/download_report.html:78 templates/Log/log_list.html:59
+msgid "Submit"
+msgstr "제출"
+
+#: templates/Log/download_report.html:96
+#, fuzzy
+#| msgid "User Management"
+msgid "User"
+msgstr "사용자"
+
+#: templates/Log/download_report.html:99
+msgid "chart_name"
+msgstr "차트이름"
+
+#: templates/Log/download_report.html:102 templates/Log/log_list.html:71
+msgid "Date"
+msgstr "날짜"
+
+#: templates/Log/download_report.html:105
+#: templates/OperationManagement/bulletin_board_management.html:78
+#: templates/OperationManagement/bulletin_board_management.html:108
+#: templates/OperationManagement/bulletin_board_management.html:138
+#: templates/OperationManagement/bulletin_board_management.html:168
+#: templates/index.html:74 templates/index.html:104 templates/index.html:134
+#: templates/index.html:164
+#, fuzzy
+#| msgid "category"
+msgid "Category"
+msgstr "카테고리"
+
+#: templates/Log/log_list.html:11
+#, fuzzy
+#| msgid "Log list"
+msgid "Log List"
+msgstr "로그 목록"
+
+#: templates/Log/log_list.html:34
+#, fuzzy
+#| msgid "Log list"
+msgid "log list"
+msgstr "로그 목록"
+
+#: templates/Log/log_list.html:65
+#, fuzzy
+#| msgid "Sessions"
+msgid "Session ID"
+msgstr "세션"
+
+#: templates/Log/log_list.html:66
+msgid "user"
+msgstr "사용자"
+
+#: templates/Log/log_list.html:67
+msgid "url"
+msgstr "URL"
+
+#: templates/Log/log_list.html:68
+msgid "start_time"
+msgstr "시작시간"
+
+#: templates/Log/log_list.html:69
+msgid "end_time"
+msgstr "종료시간"
+
+#: templates/Log/log_list.html:70
+#, fuzzy
+#| msgid "address"
+msgid "ip_address"
+msgstr "IP 주소"
+
+#: templates/Log/log_list.html:72
+#: templates/OperationManagement/bulletin_board_management.html:42
+#: templates/index.html:41
+msgid "category"
+msgstr "카테고리"
+
+#: templates/OperationManagement/bulletin_board_management.html:39
+#: templates/index.html:38
+msgid "turn"
+msgstr "회전하다"
+
+#: templates/OperationManagement/bulletin_board_management.html:40
+#: templates/index.html:39
+msgid "notice board"
+msgstr "공지 사항 게시판"
+
+#: templates/OperationManagement/bulletin_board_management.html:41
+#: templates/index.html:40
+msgid "number of posts"
+msgstr "게시물 수"
+
+#: templates/OperationManagement/bulletin_board_management.html:43
+#: templates/index.html:42
+msgid "Attachments"
+msgstr "첨부파일"
+
+#: templates/OperationManagement/bulletin_board_management.html:44
+#: templates/index.html:43
+msgid "Whether or not to use"
+msgstr "사용 여부"
+
+#: templates/OperationManagement/bulletin_board_management.html:45
+#: templates/index.html:44
+#, fuzzy
+#| msgid "Users Sessions"
+msgid "Creation date"
+msgstr "생성일"
+
+#: templates/OperationManagement/bulletin_board_management.html:46
+#: templates/index.html:45
+msgid "note"
+msgstr "비고"
+
+#: templates/OperationManagement/bulletin_board_management.html:79
+#: templates/OperationManagement/bulletin_board_management.html:109
+#: templates/OperationManagement/bulletin_board_management.html:139
+#: templates/OperationManagement/bulletin_board_management.html:169
+#: templates/index.html:75 templates/index.html:105 templates/index.html:135
+#: templates/index.html:165
+#, fuzzy
+#| msgid "Notice"
+msgid "Notice board"
+msgstr "공지사항"
+
+#: templates/OperationManagement/bulletin_board_management.html:182
+#: templates/index.html:181
+msgid "Previous"
+msgstr "이전의"
+
+#: templates/OperationManagement/bulletin_board_management.html:182
+msgid "One"
+msgstr "하나"
+
+#: templates/OperationManagement/bulletin_board_management.html:182
+#: templates/index.html:181
+msgid "Next"
+msgstr "다음"
+
+#: templates/OperationManagement/bulletin_board_management.html:185
+#: templates/index.html:184
+#, fuzzy
+#| msgid "bulletin board list"
+msgid "Create a bulletin board"
+msgstr "게시판 목록"
+
+#: templates/ProjectManagement/project_list.html:10 templates/base.html:284
+msgid "Project Management"
+msgstr "프로젝트 관리"
+
+#: templates/ProjectManagement/project_list.html:11
+#: templates/ProjectManagement/project_list.html:34
+msgid "Project List"
+msgstr "프로젝트 목록"
+
+#: templates/ProjectManagement/project_list.html:46
+#: templates/UserManagement/user_management.html:53
+#, fuzzy
+#| msgid "User Management"
+msgid "Username"
+msgstr "사용자 이름"
+
+#: templates/ProjectManagement/project_list.html:47
+msgid "Project Name"
+msgstr "프로젝트 이름"
+
+#: templates/ProjectManagement/project_list.html:48
+msgid "Created On"
+msgstr "생성 일자"
+
+#: templates/ProjectManagement/project_list.html:49
+msgid "Extended On"
+msgstr "연장된 날짜"
+
+#: templates/ProjectManagement/project_list.html:50
+msgid "Reason For Extension"
+msgstr "연장 사유"
+
+#: templates/ProjectManagement/project_list.html:51
+msgid "Deleted On"
+msgstr "삭제"
+
+#: templates/SessionMgmt/session_mgmt.html:10
+#: templates/SessionMgmt/session_mgmt.html:11 templates/base.html:306
+#, fuzzy
+#| msgid "User Management"
+msgid "Session Management"
+msgstr "사용자 관리"
+
+#: templates/SessionMgmt/session_mgmt.html:34
+#, fuzzy
+#| msgid "Post details"
+msgid "User Statistics"
+msgstr "게시물 상세"
+
+#: templates/UserManagement/user_management.html:26
+#: templates/UserManagement/user_management.html:40
+#: templates/UserManagement/user_management_register.html:25
+#: templates/UserManagement/user_management_register.html:33
+#: templates/UserManagement/user_management_update.html:10
+#: templates/base.html:178 templates/base.html:189
+msgid "User Management"
+msgstr "사용자 관리"
+
+#: templates/UserManagement/user_management.html:56
+#, fuzzy
+#| msgid "e-mail"
+msgid "Email"
+msgstr "e-mail"
+
+#: templates/UserManagement/user_management.html:59
+msgid "Requested On"
+msgstr "요청 일자"
+
+#: templates/UserManagement/user_management.html:62
+msgid "Approved On"
+msgstr "승인 일자"
+
+#: templates/UserManagement/user_management.html:73
+msgid "User Registrations"
+msgstr "사용자 세션"
+
+#: templates/UserManagement/user_management_register.html:48
+#: templates/UserManagement/user_management_update.html:22
+msgid "Edit User"
+msgstr "사용자 수정"
+
+#: templates/UserManagement/user_management_register.html:61
+#: templates/UserManagement/user_management_update.html:34
+#: templates/UserManagement/user_management_update.html:123
+msgid "ID"
+msgstr "ID"
+
+#: templates/UserManagement/user_management_register.html:76
+msgid "double check"
+msgstr "중복확인"
+
+#: templates/UserManagement/user_management_register.html:88
+#, fuzzy
+#| msgid "User Management"
+msgid "name"
+msgstr "사용자 이름"
+
+#: templates/UserManagement/user_management_register.html:105
+msgid "e-mail"
+msgstr "e-mail"
+
+#: templates/UserManagement/user_management_update.html:11
+#, fuzzy
+#| msgid "User Management"
+msgid "User Management Edit"
+msgstr "사용자 관리"
+
+#: templates/UserManagement/user_management_update.html:47
+#: templates/UserManagement/user_management_update.html:132
+msgid "Name"
+msgstr "이름"
+
+#: templates/UserManagement/user_management_update.html:63
+#: templates/UserManagement/user_management_update.html:144
+#, fuzzy
+#| msgid "e-mail"
+msgid "E-mail"
+msgstr "e-mail"
+
+#: templates/UserManagement/user_management_update.html:110
+#, fuzzy
+#| msgid "Post details"
+msgid "User Details"
+msgstr "게시물 상세"
+
+#: templates/UserManagement/user_management_update.html:177
+#, fuzzy
+#| msgid "Log list"
+msgid "List"
+msgstr "목록"
+
+#: templates/UserManagement/user_management_update.html:188
+msgid "Change Password"
+msgstr "비밀번호 변경"
+
+#: templates/base.html:121
+msgid "Select Language:"
+msgstr "언어 선택:"
+
+#: templates/base.html:243
+msgid "Monitoring Dashboard"
+msgstr "모니터링 대시보드"
+
+#: templates/base.html:254 templates/base.html:263
+msgid "Log list"
+msgstr "로그 목록"
+
+#: templates/base.html:294
+msgid "Projects"
+msgstr "프로젝트"
+
+#: templates/base.html:316
+#, fuzzy
+#| msgid "Sessions"
+msgid "Session Stats"
+msgstr "세션"
+
+#: templates/googleanalytics.html:23
+msgid "Users Sessions"
+msgstr "사용자 세션"
+
+#: templates/googleanalytics.html:28
+msgid "Line"
+msgstr "선"
+
+#: templates/googleanalytics.html:29
+msgid "Column"
+msgstr "열"
+
+#: templates/googleanalytics.html:30
+msgid "Table"
+msgstr "표"
+
+#: templates/googleanalytics.html:35 templates/googleanalytics.html:81
+#: templates/googleanalytics.html:103 templates/googleanalytics.html:128
+msgid "Last 30 Days"
+msgstr "지난 30일"
+
+#: templates/googleanalytics.html:36 templates/googleanalytics.html:80
+#: templates/googleanalytics.html:102 templates/googleanalytics.html:127
+msgid "Last 7 Days"
+msgstr "지난 7일"
+
+#: templates/googleanalytics.html:51
+msgid "In Last Five Minutes"
+msgstr "지난 5분 동안"
+
+#: templates/googleanalytics.html:53
+msgid "Active users on site"
+msgstr "사이트의 활성 사용자"
+
+#: templates/googleanalytics.html:58
+msgid "Page View Per Minute"
+msgstr "분당 페이지 조회수"
+
+#: templates/googleanalytics.html:75
+msgid "Sessions by country"
+msgstr "지역별 세션"
+
+#: templates/googleanalytics.html:97
+msgid "Sessions by Device"
+msgstr "장치별 세션"
+
+#: templates/googleanalytics.html:122
+msgid "What pages do your users visit  ?"
+msgstr "사용자는 어떤 페이지를 방문합니까 ?"
+
+#: templates/googleanalytics.html:144
+msgid "Audience"
+msgstr "방문자"
+
+#: templates/googleanalytics.html:154
+#, fuzzy
+#| msgid "User Management"
+msgid "Users"
+msgstr "사용자"
+
+#: templates/googleanalytics.html:158
+msgid "New Users"
+msgstr "신규 사용자"
+
+#: templates/googleanalytics.html:162
+msgid "Sessions"
+msgstr "세션"
+
+#: templates/googleanalytics.html:166
+#, fuzzy
+#| msgid "Page Views"
+msgid "Page Views "
+msgstr "페이지 조회수"
+
+#: templates/googleanalytics.html:170
+msgid "Page/Session"
+msgstr "페이지/세션"
+
+#: templates/googleanalytics.html:174
+msgid "Bounce Rate"
+msgstr "반송률"
+
+#: templates/index.html:10
+#, fuzzy
+#| msgid "User Management"
+msgid "Operation Management"
+msgstr "사용자 관리"
+
+#: templates/index.html:11
+#, fuzzy
+#| msgid "bulletin board list"
+msgid "Bulletin board management"
+msgstr "게시판 목록"
+
+#~ msgid "Q&A"
+#~ msgstr "Q&A"
+
+#~ msgid "Organization"
+#~ msgstr "조직"
+
+#~ msgid "Purpose"
+#~ msgstr "목적"
+
+#~ msgid "Gender"
+#~ msgstr "성별"
+
+#~ msgid "Subscription Status"
+#~ msgstr "구독 상태"
+
+#~ msgid "Modified Date"
+#~ msgstr "수정 날짜"
+
+#, fuzzy
+#~| msgid "Sign-up Party"
+#~ msgid "Signup Party"
+#~ msgstr "회원 분류"
+
+#~ msgid "male"
+#~ msgstr "남성"
+
+#~ msgid "female"
+#~ msgstr "여성"
+
+#~ msgid "date of birth"
+#~ msgstr "생년월일"
+
+#~ msgid "mobile number"
+#~ msgstr "휴대폰 번호"
+
+#~ msgid "Zip code"
+#~ msgstr "우편번호"
+
+#~ msgid "address"
+#~ msgstr "주소"
+
+#~ msgid "The remaining address"
+#~ msgstr "상세 주소"
+
+#, fuzzy
+#~| msgid "Gender"
+#~ msgid "gender"
+#~ msgstr "성별"
+
+#~ msgid "Male"
+#~ msgstr "남성"
+
+#, fuzzy
+#~| msgid "female"
+#~ msgid "Female"
+#~ msgstr "여성"
+
+#, fuzzy
+#~| msgid "date of birth"
+#~ msgid "Date of birth"
+#~ msgstr "생년월일"
+
+#, fuzzy
+#~| msgid "mobile number"
+#~ msgid "Mobile number"
+#~ msgstr "휴대폰 번호"
+
+#, fuzzy
+#~| msgid "address"
+#~ msgid "Address"
+#~ msgstr "주소"
+
+#, fuzzy
+#~| msgid "The remaining address"
+#~ msgid "The remaining Address"
+#~ msgstr "상세 주소"
+
+#, fuzzy
+#~| msgid "Subscription Status"
+#~ msgid "Subscription type"
+#~ msgstr "구독 상태"
+
+#, fuzzy
+#~| msgid "Subscription Status"
+#~ msgid "Subscription status"
+#~ msgstr "구독 상태"
+
+#, fuzzy
+#~| msgid "Modified Date"
+#~ msgid "Modified date"
+#~ msgstr "수정 날짜"
+
+#, fuzzy
+#~| msgid "Users Sessions"
+#~ msgid "Registration date"
+#~ msgstr "사용자 세션"
+
+#, fuzzy
+#~| msgid "address"
+#~ msgid "IP Address"
+#~ msgstr "주소"
+
+#, fuzzy
+#~| msgid "Modified Date"
+#~ msgid "Visited"
+#~ msgstr "수정 날짜"
+
+#, fuzzy
+#~| msgid "Sessions"
+#~ msgid "session_id"
+#~ msgstr "세션 ID"
+
+#~ msgid "world"
+#~ msgstr "세계"

@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title %}Monitoring Dashboard : Session Statistics{% endblock %}
+{% load static %}
+{% block content %}
+{% load i18n %}
+    <div class="page-header page-header-light">
+        <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+            <div class="breadcrumb">
+                <a href="{% url 'home' %}" class="breadcrumb-item">
+                    <i class="icon-home2 mr-2"></i>
+                    <font style="vertical-align: inherit;">{% translate "Home" %}</font>
+                </a>
+                <span class="breadcrumb-item">
+                    <font style="vertical-align: inherit;">{% translate "Program" %}</font>
+                </span>
+                <span class="breadcrumb-item">
+                    <font style="vertical-align: inherit;">{% translate "Monitoring Dashboard" %}</font>
+                </span>
+                <span class="breadcrumb-item active">
+                    <span class="font-weight-bold text-danger">
+                        <font style="vertical-align: inherit;">{% translate "Session Statistics" %}</font>
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="content px-2 py-2 bg-white">
+        <div class="row d-flex">
+            <div class="col-md-6 mx-auto mb-2">
+                <div class="card border-grey-300 my-0 mb-1">
+                    <div class="card-header bg-light header-elements-inline pl-2 py-2">
+                        <h6 class="card-title font-weight-bold font-size-sm">
+                            {% translate "User Statistics" %}
+                        </h6>
+                        <div class="ml-auto">
+                            <button onclick="updateSessionStats()" class="btn btn-sm btn-secondary">
+                                {% translate "Refresh" %}
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div><b>Total Users: <span id="total-users-count">0</span></b></div>
+                        <br>
+                        <div>Logged In Users: <span id="logged-in-count">0</span></div>
+                        <div>Logged Out Users: <span id="logged-out-count">0</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    function updateSessionStats() {
+        fetch("{% url 'session_stats' %}")
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('logged-in-count').textContent = data.logged_in;
+                document.getElementById('logged-out-count').textContent = data.logged_out;
+                document.getElementById('total-users-count').textContent = data.total_users;
+            })
+            .catch(error => console.error('Error:', error));
+    }
+    updateSessionStats();
+
+
+
+
+</script>
+{% endblock content%}

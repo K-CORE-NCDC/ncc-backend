@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- {{data}} -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load("current", {packages:["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ["circos", "Density", { 'role': "style" } ],
+            ["volcano", 11, "#b87333"],
+            ["fusion", 5, "blue"],
+            ["cnv", 2, "silver"],
+            ["heatmap", 16, "color: gold"]
+          ]);
+          var view = new google.visualization.DataView(data);
+          view.setColumns([0, 1,
+                           { calc: "stringify",
+                             sourceColumn: 1,
+                             type: "string",
+                             role: "annotation" },
+                           2]);
+    
+          var options = {
+            title: "Visits per chart",
+            width: 600,
+            height: 400,
+            bar: {groupWidth: "95%"},
+            legend: { position: "none" },
+            orientation:'horizontal'
+          };
+          var chart = new google.visualization.BarChart(document.getElementById("barchart_values"));
+          chart.draw(view, options);
+      }
+      </script>
+
+
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['sessionId', 'TimeSpent'],
+      ['sid-1',  80],
+      ['sid-2',  40],
+      ['sid-3',  60],
+      ['sid-4',  10]
+    ]);
+
+    var options = {
+      title: 'Time Spent per one session',
+      curveType: 'function',
+      legend: { position: 'bottom' }
+    };
+
+    var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+    chart.draw(data, options);
+  }
+</script>
+<div class="d-flex" style="height: 600px;">
+
+  <div id="barchart_values" style="width: 900px; height: 200px;"></div>
+  <div id="curve_chart" style="width: 900px; height: 400px"></div>
+</div>
+{% endblock %}

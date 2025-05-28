@@ -1,0 +1,200 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="content-wrapper">
+
+        <!-- Page header -->
+        <div class="page-header page-header-light">
+            <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+                <div class="breadcrumb">
+                    <a href="/mngr/main/main.do" class="breadcrumb-item"><i class="icon-home2 mr-2"></i>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;"> Home</font>
+                        </font>
+                    </a>
+
+
+
+
+
+                    <span class="breadcrumb-item">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">program</font>
+                        </font>
+                    </span>
+
+
+
+
+                    <span class="breadcrumb-item">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Community Management</font>
+                        </font>
+                    </span>
+
+
+
+                    <span class="breadcrumb-item active"><span class="font-weight-bold text-danger">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Notice</font>
+                            </font>
+                        </span></span>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+        <!-- /page header -->
+
+        <!-- Content area -->
+        <div class="content px-2 py-2 bg-white">
+
+
+
+
+
+
+
+            <div class="card border-grey-300 my-0 mb-1">
+                <div class="card-header bg-light header-elements-inline pl-2 py-2">
+                    <h6 class="card-title font-weight-bold font-size-sm">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Post details</font>
+                        </font>
+                    </h6>
+                </div>
+                <div class="card-body px-2 py-2">
+
+                    <form id="frm1" name="frm1">
+                        <input type="hidden" name="tbl" value="4619a1ee-e1a1-4c5a-85e2-15da5315959f">
+                        <input type="hidden" name="code" value="c5c07a25-353d-459e-82eb-318e8e793492">
+                    </form>
+
+                    <fieldset disabled="disabled">
+
+                        <div class="form-group mb-2">
+                            <label class="form-label-sm mb-0">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">title</font>
+                                </font>
+                            </label>
+                            <input type="text" value="서버 점검 일시" class="form-control form-control-sm text-dark">
+                        </div>
+
+                        <div class="form-row">
+
+
+
+
+
+                            <div class="form-group col-12 col-md mb-2">
+                                <label class="form-label-sm mb-0">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Writer</font>
+                                    </font>
+                                </label>
+                                <input type="text" value="관리자" class="form-control form-control-sm text-dark">
+                            </div>
+
+                        </div>
+
+                        <div class="form-group mb-0">
+                            <label class="form-label-sm mb-0">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Contents</font>
+                                </font>
+                            </label>
+                            <div class="card mb-0" style="min-height: 150px;">
+                                <div class="card-body px-2 py-2">
+                                    <p>
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">We will notify you of the server
+                                                maintenance date. </font>
+                                            <font style="vertical-align: inherit;">2021-07-27</font>
+                                        </font><br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </fieldset>
+                </div>
+
+
+            </div>
+
+            <div class="row">
+                <div class="col-12 text-right">
+                    <a href="{% url 'notice' %}">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">List</font>
+                        </font>
+                    </a>
+
+                    <a href="/mngr/bbs/upd.do?tbl=4619a1ee-e1a1-4c5a-85e2-15da5315959f&amp;code=c5c07a25-353d-459e-82eb-318e8e793492&amp;mnId=66ce899e-4c27-4a98-ab7b-32e28aaedc85"
+                        class="btn btn-outline bg-dark border-grey-800 text-dark">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">edit</font>
+                        </font>
+                    </a>
+                    <button type="button" name="btnBbsDel" class="btn btn-danger border-danger-800">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">delete</font>
+                        </font>
+                    </button>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <!-- content area //-->
+
+        <!-- Footer -->
+        <div class="navbar navbar-expand-lg navbar-light">
+
+            <div class="text-center d-lg-none w-100">
+                <span class="navbar-text py-2">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                            © 2021. </font>
+                    </font><span class="text-slate-300">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">3BIGS</font>
+                        </font>
+                    </span>
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;"> All Rights Reserved.
+                        </font>
+                    </font>
+                </span>
+
+
+            </div>
+
+            <div class="navbar-collapse collapse" id="navbar-footer">
+                <span class="navbar-text py-2">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                            © 2021. </font>
+                    </font><span class="text-slate-300">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">3BIGS</font>
+                        </font>
+                    </span>
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;"> All Rights Reserved.
+                        </font>
+                    </font>
+                </span>
+            </div>
+        </div>
+        <!-- /footer -->
+
+    </div>
+{% endblock content %}

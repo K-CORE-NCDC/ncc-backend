@@ -1,0 +1,257 @@
+{% extends "base.html" %}
+{% block title %}User Management : Details{% endblock %}
+{% block content %}
+{% load i18n %}
+{% load custom_tags %}
+<div class="page-header page-header-light">
+  <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+    <div class="breadcrumb">
+      <a href="{% url 'home' %}" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> {%translate "Home"%}</a>
+      <span class="breadcrumb-item">{%translate "Program"%}</span>
+      <span class="breadcrumb-item">{%translate "User Management"%}</span>
+      <span class="breadcrumb-item active"><span class="font-weight-bold text-danger">{%translate "User Management Edit"%}</span></span>
+    </div>
+  </div>
+</div>
+{% if edit %}
+
+<div class="content px-2 py-2 bg-white">
+  <div class="card border-grey-300 my-0 mb-1">
+    <div class="card-header bg-light header-elements-inline pl-2 py-2">
+      <h6 class="card-title font-weight-bold font-size-sm">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">{%translate "Edit User"%}</font>
+        </font>
+      </h6>
+    </div>
+    <div class="card-body px-2 pt-2 pb-0">
+      <form id="frm1" name="frm1" method="post"
+        class="update_user_form">
+        {% csrf_token %}
+        <div class="form-row">
+          <div class="form-group col-6 col-md-6 mb-2">
+            <label class="form-label-sm mb-0">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">{%translate "ID"%}</font>
+              </font>
+            </label><strong class="text-danger pl-1">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">*</font>
+              </font>
+            </strong>
+            <input type="text" name="userid" id="userid" value="{{user_data.username}}"
+              class="form-control form-control-sm border-slate-300 text-dark">
+          </div>
+          <div class="form-group col-6 col-md-6 mb-2">
+            <label class="form-label-sm mb-0">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">{%translate "Name"%}</font>
+              </font>
+            </label><strong class="text-danger pl-1">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">*</font>
+              </font>
+            </strong>
+            <input type="text" name="userName" id="first_name" value="{{user_data.first_name}}" maxlength="10"
+              class="form-control form-control-sm maxlength-badge-position" autocomplete="off">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-6 col-md-6 mb-2">
+            <label class="form-label-sm mb-0">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">{%translate "E-mail"%}</font>
+              </font>
+            </label><strong class="text-danger pl-1">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">*</font>
+              </font>
+            </strong>
+            <input type="text" name="email" id="email" value="{{user_data.email}}" maxlength="70"
+              class="form-control form-control-sm maxlength-badge-position" autocomplete="off">
+          </div>
+        </div>
+
+        <div>
+          <label for="status" class=" ml-2">{%translate "Active"%}</label>
+          <input type="checkbox" class="ml-2" id="CheckActiveBox" name="status" value="{{user_data.is_active}}"{% if user_data.is_active %} checked{% endif %} />
+
+        </div>
+<div>
+
+    </div>
+          <input type="hidden" name="id_" id="id_" value="{{user_data.id}}" maxlength="10" class="form-control form-control-sm maxlength-badge-position" autocomplete="off">
+      </form>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-12 d-flex justify-content-between align-items-center">
+      <a href="{% url 'user_management_update' pk=user_data.id %}"
+        class="btn btn-outline bg-danger border-grey-800 text-dark">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">{%translate "Cancel"%}</font>
+        </font>
+      </a>
+      <button type="button" name="upd"  class="btn btn-dark border-grey-800" onclick="edit_user()">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">{%translate "Save"%}</font>
+        </font>
+      </button>
+    </div>
+  </div>
+</div>
+{% else %}
+<div class="content px-2 py-2 bg-white">
+  <div class="card border-grey-300 my-0 mb-1">
+    <div class="card-header bg-light header-elements-inline pl-2 py-2">
+      <h6 class="card-title font-weight-bold font-size-sm">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">{%translate "User Details"%}</font>
+        </font>
+      </h6>
+    </div>
+    <div class="card-body px-2 pt-2 pb-0">
+      <form id="frm1" name="frm1">
+        <input type="hidden" name="userKey" value="de5c2e71-e7dd-4c1c-a0f6-69a7e7f229d4">
+      </form>
+      <fieldset disabled="disabled">
+        <div class="form-row">
+          <div class="form-group col-6 col-md-6 mb-2">
+            <label class="form-label mb-0">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">{%translate "ID"%}</font>
+              </font>
+            </label>
+            <input type="text" value="{{user_data.username}}"
+              class="form-control form-control-sm border-slate-300 text-dark">
+          </div>
+          <div class="form-group col-6 col-md-6 mb-2">
+            <label class="form-label mb-0">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">{%translate "Name"%}</font>
+              </font>
+            </label>
+            <input type="text" value="{{user_data.first_name}}"
+              class="form-control form-control-sm border-slate-300 text-dark">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-6 col-md-6 mb-2">
+            <label class="form-label mb-0">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">{%translate "E-mail"%}</font>
+              </font>
+            </label>
+            <input type="text" value="{{user_data.email}}"
+              class="form-control form-control-sm border-slate-300 text-dark">
+          </div>
+        </div>
+
+        {% if user_data.is_active %}
+        <div>
+          <label for="status" class=" ml-2">{%translate "Active"%}</label>
+          <input type="checkbox" class="ml-2" id="CheckActiveBox" checked name="status" value="{{user_data.is_active}}">
+        </div>
+        {% else %}
+        <div>
+          <label for="status" class=" ml-2">{%translate "Active"%}</label>
+          <input type="checkbox" class="ml-2" id="CheckActiveBox" name="status" value="{{user_data.is_active}}">
+        </div>
+
+        {% endif %}
+
+
+      </fieldset>
+    </div>
+  </div>
+
+
+</div>
+
+<div class="row">
+  <div class="col-12 text-right">
+    <a href="{% url 'user_management' %}" class="btn btn-outline bg-dark border-grey-800 text-dark">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">{% translate "List" %}</font>
+      </font>
+    </a>
+    <a href="{% url 'user_management_update' pk=user_data.id %}?edit=True"
+      class="btn btn-outline bg-dark border-grey-800 text-dark">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">{%translate "Edit"%}</font>
+      </font>
+    </a>
+    <a href="{% url 'change_password' pk=user_data.id %}" class="btn btn-outline bg-dark border-grey-800 text-dark">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">{%translate "Change Password"%}</font>
+      </font>
+    </a>
+    <a href="{% url 'delete_user_management_user' pk=user_data.id %}" class="btn delete tn-outline  btn-danger border-danger-800 text-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Delete"%}</font></font></a>
+      {% csrf_token %}
+
+  </div>
+</div>
+{% endif %}
+<script>
+  let edit_user = ()=> {
+  let Id = ''
+  let userId = ''
+  let firstName = ''
+  let gender = ''
+  let email = ''
+  let status = ''
+
+  if(document.getElementById("id_") ){
+
+  Id = document.getElementById("id_").value
+  }
+
+  if(document.getElementById("userid") ){
+
+  userId = document.getElementById("userid").value
+  }
+  if(document.getElementById("first_name") ){
+
+  firstName = document.getElementById("first_name").value
+  }
+
+  if(document.getElementById("email") ){
+  email = document.getElementById("email").value
+  }
+  if(document.getElementById("CheckActiveBox") ){
+
+  status = document.getElementById("CheckActiveBox").value
+  }
+
+  let formData = new FormData()
+  let csrf = document.getElementsByName('csrfmiddlewaretoken')[0].value
+  formData.append("csrfmiddlewaretoken", csrf)
+  formData.append("id",Id)
+  formData.append("userid", userId)
+  formData.append("firstname", firstName)
+  formData.append("email", email)
+  formData.append("status", status)
+
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", "{% url 'usermanagement_update'%}");
+  xhr.send(formData);
+
+  xhr.onload = () => {
+  let res = JSON.parse(xhr.response)
+  console.log('res',res);
+  if (res['msg']) {
+  alert('enter mandatory fileds')
+  }
+  if(res['status'] === 'Edited'){
+  window.location.href = '{%url "user_management"%}'
+  }
+  };
+
+
+  }
+
+  </script>
+{% endblock content %}

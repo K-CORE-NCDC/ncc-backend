@@ -1,0 +1,219 @@
+{% extends "base.html" %}
+{% block title %}Log list : Log list{% endblock %}
+{% load static %}
+{% block content %}
+{% load i18n %}
+  <div class="page-header page-header-light">
+    <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+      <div class="breadcrumb">
+        <a href="{% url 'home' %}"  class="breadcrumb-item"><i class="icon-home2 mr-2"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> {%translate "Home"%}</font></font></a>
+        <span class="breadcrumb-item"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Program"%}</font></font></span>
+        <span class="breadcrumb-item"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Log"%}</font></font></span>
+        <span class="breadcrumb-item active"><span class="font-weight-bold text-danger"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Log List"%}</font></font></span></span>
+      </div>
+    </div>
+  </div>
+
+	<div class="content px-2 py-2 bg-white">
+		<div class="card border-grey-300 my-0 mb-1 d-none">
+			<div class="card-body">
+				<div class="row">
+					<div class="col-6 col-md-6 mb-2 border">
+						<div id="barchart_values" style="height: 200px;"></div>
+					</div>
+					<div class="col-6 col-md-6 mb-2 border">
+						<div id="curve_chart" style="height: 500px"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card border-grey-300 my-0 mb-1">
+			<div class="card-header bg-light header-elements-inline pl-2 py-2">
+				<h6 class="card-title font-weight-bold font-size-sm">
+					<font style="vertical-align: inherit;">
+						<font style="vertical-align: inherit;">{%translate "log list"%}</font></font></h6>
+			</div>
+			<div class="card-body px-2 py-2">
+
+				<form name="frm1" id="frm1">
+					<input type="hidden" name="tbl" value="">
+				</form>
+
+				<div class="table-responsive">
+          <p class="pr-2 ml-3">{%translate "Date Range"%}</p>
+          <div class="d-flex flex-row ml-3">
+            <div class="date-range-inputs d-flex mb-3">
+              <div class="date-group mr-4">
+                <label for="from_date" class="form-label">{% translate "From Date" %}</label>
+                <input type="text" id="from_date" name="from_date" class="form-control" placeholder="from" aria-label="{% translate 'From Date' %}">
+              </div>
+              <div class="separator my-auto">
+                <p class="mr-3">~</p>
+              </div>
+              <div class="date-group">
+                <label for="to_date" class="form-label">{% translate "To Date" %}</label>
+                <input type="text" id="to_date" name="to_date" class="form-control" placeholder="to" aria-label="{% translate 'To Date' %}">
+              </div>
+            </div>
+            <button type="submit" id="dateRange" class="btn btn-primary ml-2" style="height:34px;">{%translate "Submit"%}</button>
+          </div>
+					<table class="table table-bordered table-hover table-xs" id="ourtable2">
+            <caption></caption>
+						<thead class="border">
+							<tr>
+								<th scope="col">{%translate "Session ID"%}</th>
+                <th scope="col">{%translate "user"%}</th>
+								<th scope="col">{%translate "url"%}</th>
+								<th scope="col">{%translate "start_time"%}</th>
+								<th scope="col">{%translate "end_time"%}</th>
+								<th scope="col">{%translate "ip_address"%}</th>
+								<th scope="col">{%translate "Date"%}</th>
+                <th scope="col">{%translate "category"%}</th>
+							</tr>
+						</thead>
+            <tfoot></tfoot>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+ <link href="{% static 'admin_dashboard/css/dataTables.css' %}" rel="stylesheet" type="text/css" />
+ <link href="{% static 'admin_dashboard/css/dataTablesmin.css' %}" rel="stylesheet" type="text/css" />
+ <link href="{% static 'admin_dashboard/css/dataTablesdatetime.css' %}" rel="stylesheet" type="text/css" />
+ <script src="{% static 'admin_dashboard/js/jqueryDataTables.js' %}"></script>
+ <script src="{% static 'admin_dashboard/js/jquerybuttons.js' %}"></script>
+ <script src="{% static 'admin_dashboard/js/jszip.js' %}"></script>
+ <script src="{% static 'admin_dashboard/js/html5js.js' %}"></script>
+ <script src="{% static 'admin_dashboard/js/dataTablesdateTime.js' %}"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.2/moment.min.js"></script>
+ <script src="{% static 'admin_dashboard/js/moment.js' %}"></script>
+
+
+<script>
+  var fromDate, toDate;
+
+  $.fn.dataTable.ext.search.push(
+    function( settings, data, dataIndex ) {
+      var from = fromDate.val();
+      var to = toDate.val();
+      var date = new Date( data[4] );
+      if (
+          ( from === null && to === null ) ||
+          ( from === null && date <= to ) ||
+          ( from <= date   && to === null ) ||
+          ( from <= date   && date <= to )
+      ) {
+          return true;
+      }
+      return false;
+    }
+
+  );
+
+  $(document).ready(function() {
+
+    function newexportaction(e, dt, button, config) {
+      var self = this;
+      var oldStart = dt.settings()[0]._iDisplayStart;
+      dt.one('preXhr', function (e, s, data) {
+        // Just this once, load all data from the server...
+        data.start = 0;
+        data.length = 2147483647;
+        dt.one('preDraw', function (e, settings) {
+          if (button[0].className.indexOf('buttons-copy') >= 0) {
+            $.fn.dataTable.ext.buttons.copyHtml5.action.call(self, e, dt, button, config);
+          }
+          else if (button[0].className.indexOf('buttons-excel') >= 0) {
+            $.fn.dataTable.ext.buttons.excelHtml5.available(dt, config) ?
+            $.fn.dataTable.ext.buttons.excelHtml5.action.call(self, e, dt, button, config) :
+            $.fn.dataTable.ext.buttons.excelFlash.action.call(self, e, dt, button, config);
+          }
+          else if (button[0].className.indexOf('buttons-csv') >= 0) {
+            $.fn.dataTable.ext.buttons.csvHtml5.available(dt, config) ?
+            $.fn.dataTable.ext.buttons.csvHtml5.action.call(self, e, dt, button, config) :
+            $.fn.dataTable.ext.buttons.csvFlash.action.call(self, e, dt, button, config);
+          }
+          else if (button[0].className.indexOf('buttons-pdf') >= 0) {
+            $.fn.dataTable.ext.buttons.pdfHtml5.available(dt, config) ?
+            $.fn.dataTable.ext.buttons.pdfHtml5.action.call(self, e, dt, button, config) :
+            $.fn.dataTable.ext.buttons.pdfFlash.action.call(self, e, dt, button, config);
+          }
+          else if (button[0].className.indexOf('buttons-print') >= 0) {
+            $.fn.dataTable.ext.buttons.print.action(e, dt, button, config);
+          }
+          dt.one('preXhr', function (e, s, data) {
+            settings._iDisplayStart = oldStart;
+            data.start = oldStart;
+          });
+          // Reload the grid with the original page. Otherwise, API functions like table.cell(this) don't work properly.
+          setTimeout(dt.ajax.reload, 0);
+          return false;
+        });
+      });s
+      dt.ajax.reload();
+    };
+
+    fromDate = new DateTime($('#from_date'), {
+      // format: 'MMMM Do YYYY'
+      format: 'YYYY-MM-DD'
+    });
+
+    toDate = new DateTime($('#to_date'), {
+      format: 'YYYY-MM-DD'
+    });
+
+    var table = $('#ourtable2').DataTable({
+      "processing": true,
+      "serverSide": true,
+      "pageLength": 10,
+      "filter":true,
+      "ajax": {
+        "url": "{% url 'log_data' %}",
+        "type": "GET",
+        data: function (d) {
+          d.from = $('#from_date').val();
+          d.to = $('#to_date').val();
+        }
+      },
+      "buttons": [
+        {
+          "extend": 'excel',
+          "text": 'Excel',
+          "titleAttr": 'Excel',
+          "action": newexportaction
+        },
+        {
+          "extend": 'csv',
+          "text": 'CSV',
+          "titleAttr": 'CSV',
+          "action": newexportaction
+        }
+      ],
+      "columns": [
+        { "data": "session_id","width": "10%", "font-size": "20px"},
+        { "data": "user__username","defaultContent": "<b></b>" },
+        { "data": "url","width": "10%", "font-size": "20px"},
+        { "data": "start_time"},
+        { "data": "end_time"},
+        { "data": "ip_address"},
+        { "data": "visitedDate"},
+        { "data": "category"},
+      ],
+      "columnDefs": [{
+        "visible": false,
+        "searchable": false
+      }],
+      dom: 'Blfrtip',
+    });
+
+    $('#dateRange').on('click', function () {
+      table.draw();
+    });
+
+  });
+</script>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+{% endblock content %}

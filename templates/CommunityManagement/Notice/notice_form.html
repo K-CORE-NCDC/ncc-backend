@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}Notice : Write a Post{% endblock %}
+{% block content %}
+{% load i18n %}
+{% load custom_tags %}
+      <div class="page-header page-header-light">
+        <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+           <div class="breadcrumb">
+              <a href="{% url 'home' %}"  class="breadcrumb-item"><i class="icon-home2 mr-2"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> {%translate "Home"%}</font></font></a>
+              <span class="breadcrumb-item"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Program"%}</font></font></span>
+              <span class="breadcrumb-item"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Community Management"%}</font></font></span>
+              <span class="breadcrumb-item active"><span class="font-weight-bold text-danger"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Notice"%}</font></font></span></span>
+            </div>
+        </div>
+      </div>
+
+      <div class="content px-2 py-2 bg-white">
+        <div class="card border-grey-300 my-0 mb-1">
+        	<div class="card-header bg-light header-elements-inline pl-2 py-2">
+        		<h6 class="card-title font-weight-bold font-size-sm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Write a post"%}</font></font></h6>
+        	</div>
+        	<div class="card-body px-2 py-0">
+        		<form id="frm1" name="frm1" action="{% url 'notice_create' %}" method="post" class="notice_form1">
+        			<input type="hidden" name="tbl" value="f8927e86-6d5b-4fa5-ab7f-e97ae16ebc97">
+              		{% csrf_token %}
+        			<div class="form-group my-2">
+        				<label class="form-label-sm mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "title"%}</font></font></label><strong class="text-danger pl-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*</font></font></strong>
+        				<input type="text" name="title" id="title" maxlength="120" class="form-control form-control-sm maxlength-badge-position" autocomplete="off">
+        			</div>
+
+        			<div class="form-row">
+        				<div class="form-group col-12 col-md mb-2">
+        					<label class="form-label-sm mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "writer"%}</font></font></label><strong class="text-danger pl-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*</font></font></strong>
+        					<input type="text" name="usernm" id="usernm" maxlength="25" class="form-control form-control-sm maxlength-badge-position" autocomplete="off">
+        				</div>
+        			</div>
+					<div class="form-group mb-0">
+        				<label class="form-label-sm mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Contents"%}</font></font></label><strong class="text-danger pl-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*</font></font></strong>
+						<textarea id="ckeditor-init-script" name="detail"  data-config = "{&quot;skin&quot;: &quot;moono-lisa&quot;, &quot;toolbar_Basic&quot;: [[&quot;Source&quot;, &quot;-&quot;, &quot;Bold&quot;, &quot;Italic&quot;]], &quot;toolbar_Full&quot;: [[&quot;Styles&quot;, &quot;Format&quot;, &quot;Bold&quot;, &quot;Italic&quot;, &quot;Underline&quot;, &quot;Strike&quot;, &quot;SpellChecker&quot;, &quot;Undo&quot;, &quot;Redo&quot;], [&quot;Link&quot;, &quot;Unlink&quot;, &quot;Anchor&quot;], [&quot;Image&quot;, &quot;Flash&quot;, &quot;Table&quot;, &quot;HorizontalRule&quot;], [&quot;TextColor&quot;, &quot;BGColor&quot;], [&quot;Smiley&quot;, &quot;SpecialChar&quot;], [&quot;Source&quot;]], &quot;toolbar&quot;: &quot;full&quot;, &quot;height&quot;: 291, &quot;width&quot;: 835, &quot;filebrowserWindowWidth&quot;: 940, &quot;filebrowserWindowHeight&quot;: 725, &quot;toolbarGroups&quot;: null, &quot;extraPlugins&quot;: &quot;image2,codesnippet,embed,html5video&quot;, &quot;removePlugins&quot;: &quot;image&quot;, &quot;codeSnippet_theme&quot;: &quot;xcode&quot;, &quot;filebrowserUploadUrl&quot;: &quot;/ckeditor/upload/&quot;, &quot;filebrowserBrowseUrl&quot;: &quot;/ckeditor/browse/&quot;, &quot;language&quot;: &quot;en-us&quot;}">{{ notice_detail.content }}</textarea>
+        			</div>
+        		</form>
+        	</div>
+        </div>
+        <div class="row">
+        	<div class="col-12 d-flex justify-content-between align-items-center">
+        		<a href="{% url 'notice' %}" class="btn btn-outline bg-danger border-grey-800 text-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Cancel"%}</font></font></a>
+				<button type="button"  onclick="notice_form()" name="ins"  class="btn btn-dark border-grey-800"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{%translate "Save"%}</font></font></button>
+
+        	</div>
+        </div>
+				</div>
+
+
+{% endblock content %}
+
+{% block script %}
+
+	<script>
+		content = CKEDITOR.replace( 'detail',
+			{
+        		extraPlugins:'html5video',
+				filebrowserBrowseUrl: "/k-corev/ckeditor/browse/all",
+				filebrowserImageBrowseUrl:"/k-corev/ckeditor/browse/image",
+				filebrowserVideoBrowseUrl:"/k-corev/ckeditor/browse/video",
+				filebrowserUploadUrl:"/k-corev/ckeditor/upload/",
+			},
+			);
+
+		function selectFile(fileUrl)
+		{
+			window.opener.CKEDITOR.tools.callFunction(1, fileUrl);
+		}
+	</script>
+{% endblock script %}

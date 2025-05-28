@@ -1,0 +1,735 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-01 06:54+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: admin_app/views.py:57 templates/languagetest.html:63
+msgid "hello"
+msgstr ""
+
+#: ckeditor_uploader/forms.py:6
+msgid "Search files"
+msgstr ""
+
+#: ckeditor_uploader/templates/ckeditor/browse.html:5
+msgid "Select an image to embed"
+msgstr ""
+
+#: ckeditor_uploader/templates/ckeditor/browse.html:27
+msgid "Browse for the image you want, then click 'Embed Image' to continue..."
+msgstr ""
+
+#: ckeditor_uploader/templates/ckeditor/browse.html:29
+msgid ""
+"No images found. Upload images using the 'Image Button' dialog's 'Upload' "
+"tab."
+msgstr ""
+
+#: ckeditor_uploader/templates/ckeditor/browse.html:50
+msgid "Images in: "
+msgstr ""
+
+#: ckeditor_uploader/templates/ckeditor/browse.html:62
+msgid "Embed Images"
+msgstr ""
+
+#: ckeditor_uploader/templates/ckeditor/browse.html:80
+msgid "Embed Imager"
+msgstr ""
+
+#: ckeditor_uploader/templates/ckeditor/browse.html:146
+msgid "Play Slideshow"
+msgstr ""
+
+#: ckeditor_uploader/templates/ckeditor/browse.html:147
+msgid "Pause Slideshow"
+msgstr ""
+
+#: ckeditor_uploader/templates/ckeditor/browse.html:148
+msgid "&lsaquo; Previous Photo"
+msgstr ""
+
+#: ckeditor_uploader/templates/ckeditor/browse.html:149
+msgid "Next Photo &rsaquo;"
+msgstr ""
+
+#: ckeditor_uploader/templates/ckeditor/browse.html:150
+msgid "Next &rsaquo;"
+msgstr ""
+
+#: ckeditor_uploader/templates/ckeditor/browse.html:151
+msgid "&lsaquo; Prev"
+msgstr ""
+
+#: ncc/settings.py:172
+msgid "English"
+msgstr ""
+
+#: ncc/settings.py:173
+msgid "Korean"
+msgstr ""
+
+#: templates/CommunityManagement/FAQ/edit_form.html:8
+#: templates/CommunityManagement/FAQ/faq.html:8
+#: templates/CommunityManagement/FAQ/faq_form.html:8
+#: templates/CommunityManagement/Notice/edit_form.html:8
+#: templates/CommunityManagement/Notice/notice.html:8
+#: templates/CommunityManagement/Notice/notice_form.html:8
+#: templates/CommunityManagement/Q&A/edit_form.html:8
+#: templates/CommunityManagement/Q&A/q_and_a.html:8
+#: templates/CommunityManagement/Q&A/q_and_a_form.html:8
+#: templates/Log/download_report.html:9 templates/Log/log_list.html:7
+#: templates/UserManagement/user_management.html:11
+#: templates/UserManagement/user_management_register.html:8
+#: templates/UserManagement/user_management_update.html:8
+#: templates/index.html:8
+msgid "Home"
+msgstr ""
+
+#: templates/CommunityManagement/FAQ/edit_form.html:9
+#: templates/CommunityManagement/FAQ/faq.html:9
+#: templates/CommunityManagement/FAQ/faq_form.html:9
+#: templates/CommunityManagement/Notice/edit_form.html:9
+#: templates/CommunityManagement/Notice/notice.html:9
+#: templates/CommunityManagement/Notice/notice_form.html:9
+#: templates/CommunityManagement/Q&A/edit_form.html:9
+#: templates/CommunityManagement/Q&A/q_and_a.html:9
+#: templates/CommunityManagement/Q&A/q_and_a_form.html:9
+#: templates/Log/download_report.html:14 templates/Log/log_list.html:8
+#: templates/UserManagement/user_management.html:16
+#: templates/UserManagement/user_management_register.html:9
+#: templates/UserManagement/user_management_update.html:9
+#: templates/index.html:9
+msgid "Program"
+msgstr ""
+
+#: templates/CommunityManagement/FAQ/edit_form.html:10
+#: templates/CommunityManagement/FAQ/faq.html:10
+#: templates/CommunityManagement/FAQ/faq_form.html:10
+#: templates/CommunityManagement/Notice/edit_form.html:10
+#: templates/CommunityManagement/Notice/notice.html:10
+#: templates/CommunityManagement/Notice/notice_form.html:10
+#: templates/CommunityManagement/Q&A/edit_form.html:10
+#: templates/CommunityManagement/Q&A/q_and_a.html:10
+#: templates/CommunityManagement/Q&A/q_and_a_form.html:10
+#: templates/base.html:212
+msgid "Community Management"
+msgstr ""
+
+#: templates/CommunityManagement/FAQ/edit_form.html:11
+#: templates/CommunityManagement/FAQ/faq.html:11
+#: templates/CommunityManagement/FAQ/faq.html:47
+#: templates/CommunityManagement/FAQ/faq_form.html:11 templates/base.html:229
+msgid "FAQ"
+msgstr ""
+
+#: templates/CommunityManagement/FAQ/edit_form.html:19
+#: templates/CommunityManagement/Notice/edit_form.html:19
+#: templates/CommunityManagement/Q&A/edit_form.html:19
+msgid "edit post"
+msgstr ""
+
+#: templates/CommunityManagement/FAQ/edit_form.html:30
+#: templates/CommunityManagement/FAQ/faq.html:56
+#: templates/CommunityManagement/Notice/edit_form.html:27
+#: templates/CommunityManagement/Notice/notice.html:27
+#: templates/CommunityManagement/Notice/notice.html:57
+#: templates/CommunityManagement/Q&A/edit_form.html:27
+#: templates/CommunityManagement/Q&A/q_and_a.html:26
+#: templates/CommunityManagement/Q&A/q_and_a.html:56
+msgid "Title"
+msgstr ""
+
+#: templates/CommunityManagement/FAQ/edit_form.html:35
+#: templates/CommunityManagement/Notice/edit_form.html:32
+#: templates/CommunityManagement/Q&A/edit_form.html:32
+msgid "Author"
+msgstr ""
+
+#: templates/CommunityManagement/FAQ/edit_form.html:40
+#: templates/CommunityManagement/FAQ/edit_form.html:74
+#: templates/CommunityManagement/FAQ/faq.html:27
+#: templates/CommunityManagement/FAQ/faq_form.html:40
+#: templates/CommunityManagement/Notice/edit_form.html:37
+#: templates/CommunityManagement/Notice/edit_form.html:76
+#: templates/CommunityManagement/Notice/notice.html:28
+#: templates/CommunityManagement/Notice/notice_form.html:43
+#: templates/CommunityManagement/Q&A/edit_form.html:37
+#: templates/CommunityManagement/Q&A/edit_form.html:71
+#: templates/CommunityManagement/Q&A/q_and_a.html:27
+#: templates/CommunityManagement/Q&A/q_and_a_form.html:40
+msgid "Contents"
+msgstr ""
+
+#: templates/CommunityManagement/FAQ/edit_form.html:48
+#: templates/CommunityManagement/FAQ/faq_form.html:50
+#: templates/CommunityManagement/Notice/edit_form.html:50
+#: templates/CommunityManagement/Notice/notice_form.html:53
+#: templates/CommunityManagement/Q&A/edit_form.html:45
+#: templates/CommunityManagement/Q&A/q_and_a_form.html:50
+#: templates/UserManagement/user_management_register.html:178
+#: templates/UserManagement/user_management_update.html:184
+msgid "Cancel"
+msgstr ""
+
+#: templates/CommunityManagement/FAQ/edit_form.html:49
+#: templates/CommunityManagement/FAQ/faq_form.html:51
+#: templates/CommunityManagement/Notice/edit_form.html:51
+#: templates/CommunityManagement/Notice/notice_form.html:54
+#: templates/CommunityManagement/Q&A/edit_form.html:46
+#: templates/CommunityManagement/Q&A/q_and_a_form.html:51
+#: templates/UserManagement/user_management_register.html:183
+#: templates/UserManagement/user_management_update.html:189
+msgid "Save"
+msgstr ""
+
+#: templates/CommunityManagement/FAQ/edit_form.html:57
+#: templates/CommunityManagement/Notice/edit_form.html:59
+#: templates/CommunityManagement/Q&A/edit_form.html:54
+msgid "Post details"
+msgstr ""
+
+#: templates/CommunityManagement/FAQ/edit_form.html:63
+#: templates/CommunityManagement/FAQ/faq.html:26
+#: templates/CommunityManagement/FAQ/faq_form.html:27
+#: templates/CommunityManagement/Notice/edit_form.html:65
+#: templates/CommunityManagement/Notice/notice_form.html:26
+#: templates/CommunityManagement/Q&A/edit_form.html:60
+#: templates/CommunityManagement/Q&A/q_and_a_form.html:27
+msgid "title"
+msgstr ""
+
+#: templates/CommunityManagement/FAQ/edit_form.html:69
+#: templates/CommunityManagement/FAQ/faq.html:28
+#: templates/CommunityManagement/FAQ/faq.html:57
+#: templates/CommunityManagement/Notice/edit_form.html:71
+#: templates/CommunityManagement/Notice/notice.html:29
+#: templates/CommunityManagement/Notice/notice.html:58
+#: templates/CommunityManagement/Q&A/edit_form.html:66
+#: templates/CommunityManagement/Q&A/q_and_a.html:28
+#: templates/CommunityManagement/Q&A/q_and_a.html:57
+msgid "Writer"
+msgstr ""
+
+#: templates/CommunityManagement/FAQ/edit_form.html:87
+#: templates/CommunityManagement/Notice/edit_form.html:102
+#: templates/CommunityManagement/Q&A/edit_form.html:84
+#: templates/OperationManagement/bulletin_board_management.html:77
+#: templates/OperationManagement/bulletin_board_management.html:107
+#: templates/OperationManagement/bulletin_board_management.html:137
+#: templates/OperationManagement/bulletin_board_management.html:167
+#: templates/UserManagement/user_management_update.html:373
+#: templates/index.html:73 templates/index.html:103 templates/index.html:133
+#: templates/index.html:163
+msgid "Edit"
+msgstr ""
+
+#: templates/CommunityManagement/FAQ/edit_form.html:88
+#: templates/CommunityManagement/Notice/edit_form.html:103
+#: templates/CommunityManagement/Q&A/edit_form.html:85
+#: templates/UserManagement/user_management_update.html:381
+msgid "Delete"
+msgstr ""
+
+#: templates/CommunityManagement/FAQ/faq.html:24
+#: templates/CommunityManagement/Notice/notice.html:25
+#: templates/CommunityManagement/Q&A/q_and_a.html:24
+msgid "Search Type"
+msgstr ""
+
+#: templates/CommunityManagement/FAQ/faq.html:32
+#: templates/CommunityManagement/Notice/notice.html:33
+#: templates/CommunityManagement/Q&A/q_and_a.html:32
+msgid "Search Content"
+msgstr ""
+
+#: templates/CommunityManagement/FAQ/faq.html:37
+#: templates/CommunityManagement/Notice/notice.html:38
+#: templates/CommunityManagement/Q&A/q_and_a.html:37
+msgid "Search"
+msgstr ""
+
+#: templates/CommunityManagement/FAQ/faq.html:55
+#: templates/CommunityManagement/Notice/notice.html:56
+#: templates/CommunityManagement/Q&A/q_and_a.html:55
+#: templates/UserManagement/user_management.html:41
+msgid "SNO"
+msgstr ""
+
+#: templates/CommunityManagement/FAQ/faq.html:58
+#: templates/CommunityManagement/Notice/notice.html:59
+#: templates/CommunityManagement/Q&A/q_and_a.html:58
+msgid "Date of Issue"
+msgstr ""
+
+#: templates/CommunityManagement/FAQ/faq.html:65
+#: templates/CommunityManagement/Notice/notice.html:66
+#: templates/CommunityManagement/Q&A/q_and_a.html:65
+#: templates/OperationManagement/bulletin_board_management.html:21
+msgid "bulletin board list"
+msgstr ""
+
+#: templates/CommunityManagement/FAQ/faq.html:66
+#: templates/CommunityManagement/FAQ/faq_form.html:19
+#: templates/CommunityManagement/Notice/notice.html:67
+#: templates/CommunityManagement/Notice/notice_form.html:19
+#: templates/CommunityManagement/Q&A/q_and_a.html:66
+#: templates/CommunityManagement/Q&A/q_and_a_form.html:19
+msgid "Write a post"
+msgstr ""
+
+#: templates/CommunityManagement/FAQ/faq_form.html:33
+#: templates/CommunityManagement/Notice/notice_form.html:32
+#: templates/CommunityManagement/Q&A/q_and_a_form.html:33
+msgid "writer"
+msgstr ""
+
+#: templates/CommunityManagement/Notice/edit_form.html:11
+#: templates/CommunityManagement/Notice/notice.html:11
+#: templates/CommunityManagement/Notice/notice.html:48
+#: templates/CommunityManagement/Notice/notice_form.html:11
+#: templates/base.html:219
+msgid "Notice"
+msgstr ""
+
+#: templates/CommunityManagement/Notice/edit_form.html:86
+#: templates/CommunityManagement/Notice/edit_form.html:91
+#: templates/UserManagement/user_management_register.html:165
+#: templates/UserManagement/user_management_update.html:166
+#: templates/UserManagement/user_management_update.html:344
+#: templates/UserManagement/user_management_update.html:349
+msgid "Active"
+msgstr ""
+
+#: templates/CommunityManagement/Q&A/edit_form.html:11
+#: templates/CommunityManagement/Q&A/q_and_a.html:11
+#: templates/CommunityManagement/Q&A/q_and_a_form.html:11
+#: templates/base.html:224
+msgid "Q&A"
+msgstr ""
+
+#: templates/Log/download_report.html:19 templates/Log/log_list.html:9
+msgid "Log"
+msgstr ""
+
+#: templates/Log/download_report.html:25
+msgid "Capture Log"
+msgstr ""
+
+#: templates/Log/download_report.html:37 templates/base.html:264
+msgid "Capture Log list"
+msgstr ""
+
+#: templates/Log/download_report.html:42 templates/Log/log_list.html:42
+msgid "Date Range"
+msgstr ""
+
+#: templates/Log/download_report.html:58 templates/Log/log_list.html:58
+msgid "Submit"
+msgstr ""
+
+#: templates/Log/download_report.html:63
+msgid "User"
+msgstr ""
+
+#: templates/Log/download_report.html:64
+msgid "Organization"
+msgstr ""
+
+#: templates/Log/download_report.html:65
+msgid "Purpose"
+msgstr ""
+
+#: templates/Log/download_report.html:66
+msgid "chart_name"
+msgstr ""
+
+#: templates/Log/download_report.html:67 templates/Log/log_list.html:68
+msgid "ip_address"
+msgstr ""
+
+#: templates/Log/download_report.html:68 templates/Log/log_list.html:70
+#: templates/OperationManagement/bulletin_board_management.html:42
+#: templates/index.html:41
+msgid "category"
+msgstr ""
+
+#: templates/Log/download_report.html:69 templates/Log/log_list.html:69
+msgid "Date"
+msgstr ""
+
+#: templates/Log/log_list.html:10
+msgid "Log List"
+msgstr ""
+
+#: templates/Log/log_list.html:33
+msgid "log list"
+msgstr ""
+
+#: templates/Log/log_list.html:63
+msgid "Session ID"
+msgstr ""
+
+#: templates/Log/log_list.html:64
+msgid "user"
+msgstr ""
+
+#: templates/Log/log_list.html:65
+msgid "url"
+msgstr ""
+
+#: templates/Log/log_list.html:66
+msgid "start_time"
+msgstr ""
+
+#: templates/Log/log_list.html:67
+msgid "end_time"
+msgstr ""
+
+#: templates/OperationManagement/bulletin_board_management.html:39
+#: templates/index.html:38
+msgid "turn"
+msgstr ""
+
+#: templates/OperationManagement/bulletin_board_management.html:40
+#: templates/index.html:39
+msgid "notice board"
+msgstr ""
+
+#: templates/OperationManagement/bulletin_board_management.html:41
+#: templates/index.html:40
+msgid "number of posts"
+msgstr ""
+
+#: templates/OperationManagement/bulletin_board_management.html:43
+#: templates/index.html:42
+msgid "Attachments"
+msgstr ""
+
+#: templates/OperationManagement/bulletin_board_management.html:44
+#: templates/index.html:43
+msgid "Whether or not to use"
+msgstr ""
+
+#: templates/OperationManagement/bulletin_board_management.html:45
+#: templates/index.html:44
+msgid "Creation date"
+msgstr ""
+
+#: templates/OperationManagement/bulletin_board_management.html:46
+#: templates/index.html:45
+msgid "note"
+msgstr ""
+
+#: templates/OperationManagement/bulletin_board_management.html:78
+#: templates/OperationManagement/bulletin_board_management.html:108
+#: templates/OperationManagement/bulletin_board_management.html:138
+#: templates/OperationManagement/bulletin_board_management.html:168
+#: templates/index.html:74 templates/index.html:104 templates/index.html:134
+#: templates/index.html:164
+msgid "Category"
+msgstr ""
+
+#: templates/OperationManagement/bulletin_board_management.html:79
+#: templates/OperationManagement/bulletin_board_management.html:109
+#: templates/OperationManagement/bulletin_board_management.html:139
+#: templates/OperationManagement/bulletin_board_management.html:169
+#: templates/index.html:75 templates/index.html:105 templates/index.html:135
+#: templates/index.html:165
+msgid "Notice board"
+msgstr ""
+
+#: templates/OperationManagement/bulletin_board_management.html:182
+#: templates/index.html:181
+msgid "Previous"
+msgstr ""
+
+#: templates/OperationManagement/bulletin_board_management.html:182
+msgid "One"
+msgstr ""
+
+#: templates/OperationManagement/bulletin_board_management.html:182
+#: templates/index.html:181
+msgid "Next"
+msgstr ""
+
+#: templates/OperationManagement/bulletin_board_management.html:185
+#: templates/index.html:184
+msgid "Create a bulletin board"
+msgstr ""
+
+#: templates/UserManagement/user_management.html:21
+#: templates/UserManagement/user_management.html:33
+#: templates/UserManagement/user_management_register.html:10
+#: templates/UserManagement/user_management_register.html:11
+#: templates/UserManagement/user_management_update.html:10
+#: templates/base.html:193 templates/base.html:201
+msgid "User Management"
+msgstr ""
+
+#: templates/UserManagement/user_management.html:42
+msgid "Username"
+msgstr ""
+
+#: templates/UserManagement/user_management.html:43
+#: templates/UserManagement/user_management_update.html:48
+#: templates/UserManagement/user_management_update.html:223
+msgid "Name"
+msgstr ""
+
+#: templates/UserManagement/user_management.html:44
+#: templates/UserManagement/user_management_register.html:64
+#: templates/UserManagement/user_management_update.html:235
+msgid "Gender"
+msgstr ""
+
+#: templates/UserManagement/user_management.html:45
+msgid "Subscription Status"
+msgstr ""
+
+#: templates/UserManagement/user_management.html:46
+msgid "Modified Date"
+msgstr ""
+
+#: templates/UserManagement/user_management.html:47
+msgid "Signup Party"
+msgstr ""
+
+#: templates/UserManagement/user_management.html:54
+msgid "User Registrations"
+msgstr ""
+
+#: templates/UserManagement/user_management_register.html:21
+#: templates/UserManagement/user_management_update.html:22
+msgid "Edit User"
+msgstr ""
+
+#: templates/UserManagement/user_management_register.html:35
+#: templates/UserManagement/user_management_update.html:35
+#: templates/UserManagement/user_management_update.html:214
+msgid "ID"
+msgstr ""
+
+#: templates/UserManagement/user_management_register.html:40
+msgid "double check"
+msgstr ""
+
+#: templates/UserManagement/user_management_register.html:48
+msgid "name"
+msgstr ""
+
+#: templates/UserManagement/user_management_register.html:74
+msgid "male"
+msgstr ""
+
+#: templates/UserManagement/user_management_register.html:79
+msgid "female"
+msgstr ""
+
+#: templates/UserManagement/user_management_register.html:87
+msgid "date of birth"
+msgstr ""
+
+#: templates/UserManagement/user_management_register.html:107
+msgid "mobile number"
+msgstr ""
+
+#: templates/UserManagement/user_management_register.html:120
+msgid "e-mail"
+msgstr ""
+
+#: templates/UserManagement/user_management_register.html:136
+#: templates/UserManagement/user_management_update.html:137
+#: templates/UserManagement/user_management_update.html:277
+msgid "Zip code"
+msgstr ""
+
+#: templates/UserManagement/user_management_register.html:148
+msgid "address"
+msgstr ""
+
+#: templates/UserManagement/user_management_register.html:157
+msgid "The remaining address"
+msgstr ""
+
+#: templates/UserManagement/user_management_update.html:11
+msgid "User Management Edit"
+msgstr ""
+
+#: templates/UserManagement/user_management_update.html:64
+msgid "gender"
+msgstr ""
+
+#: templates/UserManagement/user_management_update.html:74
+msgid "Male"
+msgstr ""
+
+#: templates/UserManagement/user_management_update.html:79
+msgid "Female"
+msgstr ""
+
+#: templates/UserManagement/user_management_update.html:87
+#: templates/UserManagement/user_management_update.html:244
+msgid "Date of birth"
+msgstr ""
+
+#: templates/UserManagement/user_management_update.html:107
+#: templates/UserManagement/user_management_update.html:256
+msgid "Mobile number"
+msgstr ""
+
+#: templates/UserManagement/user_management_update.html:121
+#: templates/UserManagement/user_management_update.html:265
+msgid "E-mail"
+msgstr ""
+
+#: templates/UserManagement/user_management_update.html:149
+#: templates/UserManagement/user_management_update.html:286
+msgid "Address"
+msgstr ""
+
+#: templates/UserManagement/user_management_update.html:158
+#: templates/UserManagement/user_management_update.html:295
+msgid "The remaining Address"
+msgstr ""
+
+#: templates/UserManagement/user_management_update.html:201
+msgid "User Details"
+msgstr ""
+
+#: templates/UserManagement/user_management_update.html:307
+msgid "Subscription type"
+msgstr ""
+
+#: templates/UserManagement/user_management_update.html:316
+msgid "Subscription status"
+msgstr ""
+
+#: templates/UserManagement/user_management_update.html:325
+msgid "Modified date"
+msgstr ""
+
+#: templates/UserManagement/user_management_update.html:334
+msgid "Registration date"
+msgstr ""
+
+#: templates/UserManagement/user_management_update.html:367
+msgid "List"
+msgstr ""
+
+#: templates/UserManagement/user_management_update.html:378
+msgid "Change Password"
+msgstr ""
+
+#: templates/base.html:122
+msgid "Select Language:"
+msgstr ""
+
+#: templates/base.html:239
+msgid "Monitoring Dashboard"
+msgstr ""
+
+#: templates/base.html:257
+msgid "Log list"
+msgstr ""
+
+#: templates/googleanalytics.html:23
+msgid "Users Sessions"
+msgstr ""
+
+#: templates/googleanalytics.html:28
+msgid "Line"
+msgstr ""
+
+#: templates/googleanalytics.html:29
+msgid "Column"
+msgstr ""
+
+#: templates/googleanalytics.html:30
+msgid "Table"
+msgstr ""
+
+#: templates/googleanalytics.html:35 templates/googleanalytics.html:81
+#: templates/googleanalytics.html:103 templates/googleanalytics.html:128
+msgid "Last 30 Days"
+msgstr ""
+
+#: templates/googleanalytics.html:36 templates/googleanalytics.html:80
+#: templates/googleanalytics.html:102 templates/googleanalytics.html:127
+msgid "Last 7 Days"
+msgstr ""
+
+#: templates/googleanalytics.html:51
+msgid "In Last Five Minutes"
+msgstr ""
+
+#: templates/googleanalytics.html:53
+msgid "Active users on site"
+msgstr ""
+
+#: templates/googleanalytics.html:58
+msgid "Page View Per Minute"
+msgstr ""
+
+#: templates/googleanalytics.html:75
+msgid "Sessions by country"
+msgstr ""
+
+#: templates/googleanalytics.html:97
+msgid "Sessions by Device"
+msgstr ""
+
+#: templates/googleanalytics.html:122
+msgid "What pages do your users visit  ?"
+msgstr ""
+
+#: templates/googleanalytics.html:144
+msgid "Audience"
+msgstr ""
+
+#: templates/googleanalytics.html:154
+msgid "Users"
+msgstr ""
+
+#: templates/googleanalytics.html:158
+msgid "New Users"
+msgstr ""
+
+#: templates/googleanalytics.html:162
+msgid "Sessions"
+msgstr ""
+
+#: templates/googleanalytics.html:166
+msgid "Page Views "
+msgstr ""
+
+#: templates/googleanalytics.html:170
+msgid "Page/Session"
+msgstr ""
+
+#: templates/googleanalytics.html:174
+msgid "Bounce Rate"
+msgstr ""
+
+#: templates/index.html:10
+msgid "Operation Management"
+msgstr ""
+
+#: templates/index.html:11
+msgid "Bulletin board management"
+msgstr ""

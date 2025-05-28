@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link
+      href="{%static 'admin_dashboard/css/basic_new.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <div class="login">
+      <form name="frm" action="{% url 'login' %}" method="post" class="login-form">
+        {% csrf_token %}
+        <h4 class="h-tit4">Login</h4>
+        <h3 class="h-tit5">Please use the service after logging in.</h3>
+        <div class="login_box">
+          <h5 class="h-tit5">
+            · If an error in consecutive password input (5 times) occurs, the
+            account is locked.
+          </h5>
+          {% if message %}
+          <h5 class="h-tit5">{{ message }}</h5>
+          {% endif %}
+          <ul>
+            <li>
+              <span>login ID _</span
+              ><input
+                type="text"
+                name="userid"
+                placeholder="Please enter your ID."
+              />
+            </li>
+            <li>
+              <span>Password _</span
+              ><input
+                type="password"
+                name="passwd"
+                placeholder="Please enter a password."
+              />
+            </li>
+          </ul>
+        </div>
+        <ul class="login_btn">
+          <li>
+            <button type="submit" name="login">login</button>
+          </li>
+        </ul>
+        <ul class="login_find">
+          <!-- <li><a href="/sign/find.do">Find ID</a></li> -->
+          <!-- <li><a href="/sign/find.do?sign=pwd">Find password</a></li> -->
+        </ul>
+      </form>
+    </div>
+  </body>
+  <script type="text/javascript">
+    function login_form() {
+      $(".login-form").submit();
+    }
+  </script>
+</html>

@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+.table-responsive tr{
+	white-space:nowrap;
+}
+
+.white-space-nowrap{
+	white-space:nowrap;
+}
+
+.none {
+	display: none
+}
+
+.online-help{
+	cursor:pointer
+}
+
+
+        *{margin: 0; padding: 0;box-sizing: border-box;}
+        ul,ol,li{list-style: none;}
+
+        /* ê´€ë¦¬ìž ë©”ì¸íŽ˜ì´ì§€ ëŒ€ì‹œë³´ë“œ */
+        .dashboard_t {
+            font-weight:bold;
+            margin:30px;
+			font-family: 'Roboto', sans-serif;
+        }
+
+        .dashboard_w {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 1300px;
+            margin-left:30px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .dashboard_b {
+            border-radius: 8px;
+            width: 300px;
+            height: 140px;
+            margin-bottom: 30px;
+            padding: 20px 0 0 20px;
+            position: relative;
+        }
+
+        .dashboard_h {
+        	font-size : 16px;
+        	font-weight:bold;
+        }
+
+        .dashboard_v {
+            margin-top: 25px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .dashboard_i {
+            position: absolute;
+            top: 50%;
+            margin-top: -25px;
+            right: 30px;
+            background-color: #ddd;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+        }
+
+        .dashboard_i i{
+        	font-size : 32px;
+        	color:#fff;
+        	line-height: 60px
+        }
+
+        .color_1{
+            background-color: #d4a8ff;
+            border: 1px solid #b069f9;
+        }
+        .color_1 .dashboard_i{
+            background-color: #b069f9;
+        }
+        .color_2{
+            background-color: #adcb7f;
+            border: 1px solid #6aa223;
+        }
+        .color_2 .dashboard_i{
+            background-color: #6aa223;
+        }
+
+        .color_3{
+            background-color: #ffb190;
+            border: 1px solid #f68220;
+        }
+        .color_3 .dashboard_i{
+            background-color: #f68220;
+        }
+
+        .color_4{
+            background-color: #67dbcc;
+            border: 1px solid #14baa0;
+        }
+        .color_4 .dashboard_i{
+            background-color: #14baa0;
+        }
+
+
+
+
+
+
+/* basic style for login */
+/* Res

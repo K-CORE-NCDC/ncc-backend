@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Homepage</title>
+  </head>
+
+  <body>
+    <div style=" height: 80vh;">
+      <div style="  width: 60%; margin: auto;">
+        <div style="  border-bottom: 2px solid black; display: flex; align-items: center; background-color: #ccc;"></div>
+        <div style=" background: #F5F9FF; margin-top: 5px; padding: 20px;">
+          <div>
+            <div style="width: 100%;">
+              <h1 style="   font-size: 20px;
+                        line-height: 1;
+                        font-weight: 100;
+                        font-family: sans-serif;">안녕하세요.</h1>
+              <h1 style="   font-size: 20px;
+                        line-height: 1;
+                        font-weight: 100;
+                        font-family: sans-serif;
+                        margin-top: -10px; 
+                        margin-bottom: 20px;
+                        ">K-CORE에서 보내드리는 회원가입 안내 메일입니다.</h1>
+            </div>
+          </div>
+
+          <div style="color: black;">
+            <div style="padding-top: 10px;">
+              <h1 style=" font-size: 20px;
+                        line-height: 1;
+                        font-weight: 100;">귀하의 플랫폼 ID는 다음과 같습니다.</h1>
+            </div>
+          </div>
+
+          <div style="color: black;">
+            <div style="padding-top: 5px;">
+              <h1 style=" font-size: 20px;
+                        line-height: 1;
+                        font-weight: 100;">귀하의 분석접수번호는 <span style="font-weight: bold; font-size: 24px;">{{ username }}</span> 이며,</h1>
+            </div>
+
+            <div style="padding-top: 10px;">
+              <h1 style=" font-size: 20px;
+                        line-height: 1;
+                        font-weight: 100;">비밀번호 설정을 위해 아래 링크에 접속하시어 회원가입 절차를 완료하시기 바랍니다.</h1>
+            </div>
+            <a href="{{ set_password }}" style="text-decoration: none; color: #007bff; font-size: 24px;">{{ set_password }}</a>
+            <div style="padding-top: 10px;">
+              <h1 style=" font-size: 20px;
+                        line-height: 1;
+                        font-weight: 100;">비밀번호 초기화 시 사용되는 귀하의 고유 핀번호는 <span style="font-weight: bold; font-size: 24px;">{{ unique_pin }}</span> 으로, 안전한 곳에 보관해주시기 바랍니다.</h1>
+            </div>
+
+            <div style="padding-top: 40px;">
+              <h1 style=" font-size: 20px;
+                        line-height: 1;
+                        font-weight: 100;">관리자 승인 후 사용자 데이터 시각화 기능 활용이 가능하오니, 승인 완료 메일을 확인하여 주시기 바랍니다.</h1>
+            </div>
+
+            <div style="padding-top: 40px;">
+              <h1 style=" font-size: 20px;
+                        line-height: 1;
+                        font-weight: 100;">감사합니다.</h1>
+            </div>
+
+            <div style="padding-top:10px;">
+              <h1 style=" font-size: 20px;
+                        line-height: 1;
+                        font-weight: 100;
+                        margin-top:-10px;
+                        ">K-CORE 팀 드림.</h1>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

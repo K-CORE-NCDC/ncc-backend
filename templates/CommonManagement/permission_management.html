@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+
+{% block content %}
+      <div class="page-header page-header-light">
+        <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+          <div class="breadcrumb">
+            <a href="/mngr/main/main.do" class="breadcrumb-item"><i class="icon-home2 mr-2"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Home</font></font></a>
+            <span class="breadcrumb-item"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">program</font></font></span>
+            <span class="breadcrumb-item"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">common management</font></font></span>
+            <span class="breadcrumb-item active"><span class="font-weight-bold text-danger"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Permission Management</font></font></span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="content px-2 py-2 bg-white">
+            <div class="card border-grey-300 my-0 mb-1">
+            	<div class="card-header bg-light header-elements-inline pl-2 py-2">
+            		<h6 class="card-title font-weight-bold font-size-sm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">list of permissions</font></font></h6>
+            	</div>
+            	<div class="card-body px-2 py-2">
+            		<div class="table-responsive">
+            			<form id="frm2" name="frm2">
+            				<table id="table-role" class="table table-bordered table-hover table-xs">
+            					<colgroup>
+            						<col width="5%">
+            						<col width="15%">
+            						<col width="*">
+            						<col width="15%">
+            						<col width="15%">
+            						<col width="15%">
+            					</colgroup>
+            					<thead class="thead-light text-center">
+            						<tr>
+            							<th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">turn</font></font></th>
+            							<th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">permission code</font></font></th>
+            							<th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">authority name</font></font></th>
+            							<th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Modified date</font></font></th>
+            							<th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Date of issue</font></font></th>
+            							<th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">note</font></font></th>
+            						</tr>
+            					</thead>
+            					<tbody>
+
+
+
+            									<tr class="text-center">
+            										<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">One</font></font></td>
+            										<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CC</font></font></td>
+            										<td class="text-left"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cancer Center</font></font></td>
+            										<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2021-06-25 16:32:51</font></font></td>
+            										<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2021-06-25 16:32:51</font></font></td>
+            										<td>
+            											<input type="hidden" name="roleKey" value="aaf2896d-e6ee-42e2-90c6-7c5f9110b107">
+            											<button type="button" name="upd" class="btn btn-sm btn-dark border-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">edit</font></font></button>
+            											<button type="button" name="del" class="btn btn-sm btn-danger border-danger-800"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">delete</font></font></button>
+            										</td>
+            									</tr>
+
+            									<tr class="text-center">
+            										<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></td>
+            										<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ROOT</font></font></td>
+            										<td class="text-left"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">super administrator</font></font></td>
+            										<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2021-03-23 ​​14:16:10</font></font></td>
+            										<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2021-03-23 ​​14:16:10</font></font></td>
+            										<td>
+            											<input type="hidden" name="roleKey" value="99173c8b-f979-46d4-abd7-a0a38019b1ce">
+            											<button type="button" name="upd" class="btn btn-sm btn-dark border-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">edit</font></font></button>
+            											<button type="button" name="del" class="btn btn-sm btn-danger border-danger-800"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">delete</font></font></button>
+            										</td>
+            									</tr>
+
+            									<tr class="text-center">
+            										<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3</font></font></td>
+            										<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">USER</font></font></td>
+            										<td class="text-left"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">general user</font></font></td>
+            										<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2021-03-23 ​​14:15:47</font></font></td>
+            										<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2021-03-23 ​​14:15:47</font></font></td>
+            										<td>
+            											<input type="hidden" name="roleKey" value="69ee60f1-d39a-4353-8c48-f29a8ab7de7c">
+            											<button type="button" name="upd" class="btn btn-sm btn-dark border-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">edit</font></font></button>
+            											<button type="button" name="del" class="btn btn-sm btn-danger border-danger-800"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">delete</font></font></button>
+            										</td>
+            									</tr>
+
+
+
+
+            					</tbody>
+            				</table>
+            			</form>
+            		</div>
+
+            	</div>
+            </div>
+
+            <div class="row">
+            	<div class="col-12 text-right">
+            		<button type="button" name="reg" class="btn btn-outline bg-dark border-grey-800 text-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Permission registration</font></font></button>
+            	</div>
+            </div>
+
+            <div id="modal-role" class="modal fade" tabindex="-1">
+            	<div class="modal-dialog">
+            		<div class="modal-content">
+            			<div class="modal-header bg-light d-flex justify-content-between align-items-center px-2 py-2">
+            				<h6 class="modal-title font-weight-bold font-size-sm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Permission registration</font></font></h6>
+            				<button type="button" class="close" data-dismiss="modal"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">×</font></font></button>
+            			</div>
+            			<form id="frm1" name="frm1">
+            				<input type="hidden" name="roleKey">
+            				<div class="modal-body px-2 py-2">
+            					<div class="form-row">
+            						<div class="form-group col-6 col-md-6 mb-2">
+            							<label class="form-label-sm mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">permission code</font></font></label><strong class="text-danger pl-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*</font></font></strong>
+            							<input type="text" name="roleCd" maxlength="10" class="form-control form-control-sm maxlength-badge-position" autocomplete="off" placeholder="permission code">
+            						</div>
+
+            						<div class="form-group col-6 col-md-6 mb-2">
+            							<label class="form-label-sm mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">authority name</font></font></label><strong class="text-danger pl-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*</font></font></strong>
+            							<input type="text" name="roleNm" maxlength="30" class="form-control form-control-sm maxlength-badge-position" autocomplete="off" placeholder="authority name">
+            						</div>
+            					</div>
+
+            					<div class="form-group mb-0">
+            						<label class="form-label-sm mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">memo</font></font></label>
+            						<textarea name="memo" maxlength="100" class="form-control form-control-sm maxlength-badge-position" autocomplete="off" placeholder="memo"></textarea>
+            					</div>
+            				</div>
+
+            				<div class="modal-footer bg-white d-flex justify-content-between align-items-center px-2 py-2">
+            					<button type="button" name="close" class="btn btn-sm btn-outline bg-danger border-grey-800"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">cancel</font></font></button>
+            					<button type="button" name="ins" class="btn btn-sm btn-dark border-grey-800"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Save</font></font></button>
+            				</div>
+            			</form>
+            		</div>
+            	</div>
+            </div>
+			</div>
+
+{% endblock content %}
