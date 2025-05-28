@@ -67,3 +67,15 @@ media/sumant/*
 media/sameer/*
 app/CPClient
 app/CPClient_64bit
+
+
+# Ignore environment and credential files
+.env
+.env.*
+*.env
+*.token
+*.key
+*.pem
+*.crt
+config.json
+auth.json
